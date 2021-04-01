@@ -428,7 +428,7 @@
             // Idiomas
             this.pt_PT = {filter: 'FILTRO', bulk_actions: 'Ações de grupo', norecords: 'Sem registos ...'};
             this.es_ES = {filter: 'FILTRAR', bulk_actions: 'Acciones grupales', norecords: 'No hay registros ...'};
-            this.fr_FR = {filter: 'FILTRE', bulk_actions: 'Actions de groupe', norecords: 'Pas d\'enregistrementss ...'};
+            this.fr_FR = {filter: 'FILTRE', bulk_actions: 'Actions de groupe', norecords: 'Pas d\'enregistrements ...'};
             this.en_US = {filter: 'FILTER', bulk_actions: 'Group actions', norecords: 'No records ...'};
 
             // Idioma (prioridade: localStorage -> 'pt_PT')
