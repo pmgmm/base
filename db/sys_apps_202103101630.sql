@@ -1,0 +1,3 @@
+INSERT INTO base.sys_apps (id,name,description,`_key`,vapid_subject,vapid_private_key,vapid_public_key,active,`_by`,`_on`) VALUES
+	 (1,'DELIVERY','PWA de Delivery','705.5f86bae08edf12.91994499','mailto:pmgmm@hotmail.com','VFFKVqa90LxOv0vXcvP2g4gGoJIG1KM-jrefwNMarIQ','BG1mJkqeMML088rWcvpDkjl_GFEYdy0PCsfSZzDUPHbPaxiGGB_YYWbUq2Skp5kl8e3gSCy4uwgxbQQQM5Y1V4c',1,'System Administrator','2021-01-21 15:29:39.0'),
+	 (6,'dfgdgfdfg','dfgdfgdfgdfgdgEWRWERWERWEWER','303.602aa9e464b3e4.06275291',NULL,NULL,NULL,1,'System Administrator','2021-02-15 17:09:20.0');

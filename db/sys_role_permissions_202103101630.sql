@@ -1,0 +1,17 @@
+INSERT INTO base.sys_role_permissions (role_id,permission_id,value,`_by`,`_on`) VALUES
+	 (1,1,NULL,'System Administrator','2020-10-14 10:17:27.0'),
+	 (4,4,NULL,'System Administrator','2021-01-21 13:16:28.0'),
+	 (52,206,NULL,'System Administrator','2021-01-21 13:16:28.0'),
+	 (52,207,15,'System Administrator','2021-01-21 13:16:28.0'),
+	 (52,208,NULL,'System Administrator','2021-01-21 13:16:28.0'),
+	 (101,1,NULL,'System Administrator','2021-03-03 08:32:35.0'),
+	 (101,4,NULL,'System Administrator','2021-03-03 08:32:35.0'),
+	 (101,105,NULL,'System Administrator','2021-03-03 08:32:35.0'),
+	 (101,201,15,'System Administrator','2021-03-03 08:32:35.0'),
+	 (101,202,15,'System Administrator','2021-03-03 08:32:35.0'),
+	 (101,203,15,'System Administrator','2021-03-03 08:32:35.0'),
+	 (101,204,15,'System Administrator','2021-03-03 08:32:35.0'),
+	 (101,205,15,'System Administrator','2021-03-03 08:32:35.0'),
+	 (101,206,NULL,'System Administrator','2021-03-03 08:32:35.0'),
+	 (101,207,15,'System Administrator','2021-03-03 08:32:35.0'),
+	 (101,208,NULL,'System Administrator','2021-03-03 08:32:35.0');

@@ -1,0 +1,292 @@
+/* LAYER TOP */
+/* Container */
+.pwa-layer.top {
+    z-index: 102;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    width: 100vw;
+    height: min-content;
+    max-height: calc(100vh - 10px);
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+/* Transição de swipe */
+.pwa-layer.top.swipe {
+    transition: all .3s;
+}
+/* Escondido */
+.pwa-layer.top.hide {
+    top: calc(100vh * -1);
+}
+/* "Pega" */
+.pwa-layer.top .handle {
+    width: 100px;
+    height: 6px;
+    margin-top: 4px;
+    border-radius: 3px;
+    background-color: var(--layer-top-background-color);
+}
+
+/* Área de conteúdo */
+.pwa-layer.top .body, .pwa-layer.top .form {
+    display: grid;
+    width: 100%;
+    background-color: white;
+    padding: 7px 0px;
+    box-sizing: border-box;
+}
+/* Botão */
+.pwa-layer.top .body button {
+    text-align: left;
+    padding: 8px 20px;
+    border: none;
+    white-space: nowrap;
+    width: 100%;
+    background-color: var(--layer-top-background-color);
+    color: var(--layer-top-button-color);
+    text-decoration: none;
+    white-space: nowrap;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.pwa-layer.top .body button.blink {
+    background-color: var(--layer-top-button-hover-background-color);
+}
+@media (hover:hover) {
+    .pwa-layer.top .body button:hover {
+        background-color: var(--layer-top-button-hover-background-color);
+    }
+}
+
+/* FORMULÁRIO */
+/* Textarea */
+.pwa-layer.top .form textarea {
+    resize: none;
+    margin: 5px 10px;
+    display: inline-block;
+    width: calc(100% - 20px);
+    padding: 3px 5px;
+    font-size: 1.2rem;
+}
+/* Botões */
+.pwa-layer.top .form .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 10px;  
+}
+.pwa-layer.top .form button {
+    display: block;
+    width: min-content;
+    margin: 0px 5px;
+    padding: 3px 10px;
+    font-size: 1.2rem;
+}
+
+/* Separador */
+.pwa-layer.top hr {
+    border: 0; 
+    border-top: 1px solid #333;
+    width: 100%;
+}
+
+
+/* LAYER LEFT */
+/* Container */
+.pwa-layer.left {
+    z-index: 102;
+    position: fixed;
+    display: flex;
+    top: 91px;
+    left: 0;
+    width: min-content;
+    max-width: calc(100vw * .75);
+    height: calc(100vh - 91px);
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+.pwa-layer.left.no-top-bar {
+    top: 51px;
+    height: calc(100vh - 51px);
+}
+/* Transição de swipe */
+.pwa-layer.left.swipe {
+    transition: left .4s;
+}
+/* Escondido */
+.pwa-layer.left.hide {
+    left: calc(100vw * -1);
+}
+/* "Pega" */
+.pwa-layer.left .handle {
+    width: 6px;
+    height: 100px;
+    margin-left: 4px;
+    border-radius: 3px;
+    background-color: var(--layer-left-background-color);
+}
+/* Área de botões */
+.pwa-layer.left .body {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 91px);
+    background-color: var(--layer-left-background-color);
+    padding: 7px 0px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.pwa-layer.left.no-top-bar .body {
+    height: calc(100vh - 51px);
+}
+/* Botão */
+.pwa-layer.left button {
+    display: block;
+    text-align: left;
+    padding: 8px 20px;
+    border: none;
+    white-space: nowrap;
+    width: 100%;
+    background-color: var(--layer-left-background-color);
+    color: var(--layer-left-button-color);
+    text-decoration: none;
+    white-space: nowrap;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.pwa-layer.left button.blink {
+    background-color: var(--layer-left-button-hover-background-color);
+}
+@media (hover:hover) {
+    .pwa-layer.left button:hover {
+        background-color: var(--layer-left-button-hover-background-color);
+    }
+}
+
+/* Separador */
+.pwa-layer.left hr { 
+    border: 0; 
+    border-top: 1px solid white;
+    width: 100%;
+}
+
+
+/* LAYER BOTTOM */
+/* Container */
+.pwa-layer.bottom {
+    z-index: 102;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    width: 100vw;
+    height: min-content;
+    max-height: calc(100vh - 10px);
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+/* Transição de swipe */
+.pwa-layer.bottom.swipe {
+    transition: all .3s;
+}
+/* Escondido */
+.pwa-layer.bottom.hide {
+    bottom: calc(100vh * -1);
+}
+/* "Pega" */
+.pwa-layer.bottom .handle {
+    width: 100px;
+    height: 6px;
+    margin-bottom: 4px;
+    border-radius: 3px;
+    background-color: var(--layer-bottom-background-color);
+}
+/* Área de botões */
+.pwa-layer.bottom .body {
+    display: grid;
+    width: 100%;
+    background-color: var(--layer-bottom-background-color);
+    padding: 7px 0px;
+    box-sizing: border-box;
+}
+/* Botão */
+.pwa-layer.bottom button {
+    text-align: left;
+    padding: 8px 20px;
+    border: none;
+    white-space: nowrap;
+    width: 100%;
+    background-color: var(--layer-bottom-background-color);
+    color: var(--layer-bottom-button-color);
+    text-decoration: none;
+    white-space: nowrap;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.pwa-layer.bottom button.blink {
+    background-color: var(--layer-bottom-button-hover-background-color);
+}
+@media (hover:hover) {
+    .pwa-layer.bottom button:hover {
+        background-color: var(--layer-bottom-button-hover-background-color);
+    }
+}
+
+/* Separador */
+.pwa-layer.bottom hr { 
+    border: 0; 
+    border-top: 1px solid #333;
+    width: 100%;
+}
+
+
+/* COMUM */
+/* Linha de elementos */
+.pwa-layer.top .body .line,
+.pwa-layer.bottom .body .line {
+    padding: 0px 10px;
+    line-height: 1.8rem;
+}
+/* Linha de elementos */
+.pwa-layer.top .body .line.grid-1,
+.pwa-layer.bottom .body .line.grid-1 {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    padding: 5px;
+    line-height: 1.8rem;
+}
+/* Linha de elementos */
+.pwa-layer.top .body .line.grid-2,
+.pwa-layer.bottom .body .line.grid-2 {
+    display: grid;
+    grid-template-columns: min-content min-content min-content min-content;
+    padding: 5px;
+}
+.pwa-layer.top .body .line .label,
+.pwa-layer.bottom .body .line .label {
+    white-space: nowrap;
+    padding: 0px 5px;
+    color: var(--layer-bottom-label-color);
+    font-size: 1.2rem; 
+}
+.pwa-layer.top .body .line .text,
+.pwa-layer.bottom .body .line .text {
+    white-space: nowrap;
+    color: var(--layer-bottom-label-text);
+    font-size: 1.2rem; 
+}
+.pwa-layer.top .body .line.grid-2 .label:not(:first-child),
+.pwa-layer.bottom .body .line.grid-2 .label:not(:first-child) {
+    padding-left: 10px;
+}
+/* --- END */

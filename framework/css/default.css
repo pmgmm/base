@@ -1,0 +1,69 @@
+/**
+ * CSS - Schema de cores e estilos base de componentes/elementos
+ *  
+ * @pmonteiro (yyyy-mm-dd))
+ */
+
+
+:root {
+
+    --font-family: arial, sans-serif;
+    --font-size: 13px;
+    --component-height: 28px;
+    --line-height: 20px;
+
+    /* color set GRAY */
+    --gray-dark: #333;
+    --gray-medium: #696969;
+    --gray-light: #a9a9a9;
+    --gray-ultralight: #eaeaea;
+    --gray-smoke: #f4f4f4;
+    --gray-disable: var(--gray-light);
+    --gray-placeholder: var(--gray-light);
+
+   /* color set BLUE 1, 5, 10, ant, pen (20 passos) */
+    --blue-dark: #025272; 
+    --blue-medium: #377690;
+    --blue-light: #7aa4b5;
+    --blue-ultralight: #e4edf0;
+    --blue-smoke: #f2f6f8;
+    --blue-disable: var(--blue-light);
+    --blue-placeholder: var(--blue-light);
+ 
+    /* color set GREEN */
+    --green-dark: #015301;
+    --green-medium: #367736;
+    --green-light: #79a479;
+
+    /* color set RED */
+    --red-dark: #900000;
+    --red-medium: #a73636;
+    --red-light: #c57979;
+
+    /* default colors */
+    --mandatory-color: var(--red-medium); 
+    --error-color: var(--red-medium); 
+    --page-background-color: #fafafa;
+     
+    /* other */
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+    display: none;
+    position: relative; 
+    background-color: var(--page-background-color);
+}
+table {
+    border-collapse: collapse;
+}
+input, button, textarea {
+    outline: none;
+    z-index: 0;
+}
+/* --- END */

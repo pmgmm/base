@@ -1,0 +1,195 @@
+/**
+ * TESTES
+ * 
+ * @pmonteiro (2020-03-20)
+ */  
+
+body {
+    font-family: arial, sans-serif;
+}
+
+.button {
+    user-select: none;
+    outline: none;
+    font-size: 10px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    word-wrap: none;
+    padding: 5px 12px 4px 12px;
+    cursor: pointer;
+    margin: 0 2px;
+    transition: border-color .3s ease-out;
+    transition: background-color .3s ease-out;
+}
+.button.blue {
+    border: 1px solid #1471b8;
+    background-color: #3da0ea;
+    color: #fff;
+}
+.button.blue:hover {
+    background-color: #1471b8 !important;
+}
+.button.blue.processing:disabled {
+    cursor: not-allowed;
+}
+.button.blue i.fas {
+    margin-right: 0px;
+    display: none;
+}
+.button.blue.processing i.fas {
+    margin-right: 5px;
+    display: inline-block;
+}
+.button#hideSuccesses {
+ float: right;   
+}
+.button#gotolist {
+    float: right;   
+   }
+
+   
+table.tests {
+    margin-top: 5px;
+    padding: 0 30px;
+    font-size: 10pt;
+    border-spacing: 2px;
+    border-collapse: separate;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+table.reports {
+    margin-top: 5px;
+    padding: 0 30px;
+    font-size: 10pt;
+    border-spacing: 2px;
+    border-collapse: separate;
+    line-height: 20px;
+    white-space: nowrap;
+}
+table.reports tr.title {
+    font-weight: bold;
+    color: #3da0ea;
+}
+table.reports tr.title td {
+    width: 250px;
+    border-bottom: 1px solid black ;
+}
+table.reports .line {
+    color: back;
+    line-height: 20px;
+    cursor: default;
+}
+table.reports .line a {
+    color: black;
+}
+table.reports .line.fail a {
+    color: red;
+}
+
+table.reports .line:hover {
+    background-color: #f0f9ff;
+}
+
+table.report_title {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    line-height: 24px;
+}
+table.report_title td:first-child {
+    width: 100%;
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+table.report_sub_title {
+    width: 100%;
+    padding-top: 5px;
+    font-size: 10pt;
+    border-spacing: 0;
+    border-collapse: collapse;
+    line-height: 20px;
+    white-space: nowrap;
+}
+table.report_sub_title tr {
+    border-bottom: 3px solid black ;
+}
+table.report_sub_title td:nth-child(3) {
+    width: 15%;
+}
+table.report_sub_title td:nth-child(n+4) {
+   width: 10%;
+}
+
+table.report_sub_title td span.label {
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+
+table.block {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 10pt;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    background-color:#ddd;
+}
+
+table.block tr.title {
+    line-height: 24px;
+    white-space: nowrap;
+}
+
+table.block td:first-child {
+    font-size: 12pt;
+}
+table.block td:nth-child(2) {
+    width: 15%;
+}
+table.block td:nth-child(n+3) {
+    width: 10%;
+}
+
+table.block span.label {
+    padding-right: 5px;
+}
+
+table.block_table {
+    margin-top: 5px;
+    width: 100%;
+    padding: 0 30px;
+    font-size: 10pt;
+    border-spacing: 2px;
+    border-collapse: separate;
+    line-height: 20px;
+    white-space: nowrap;
+}
+table.block_table tr.title {
+    font-weight: bold;
+    color: #3da0ea;
+}
+table.block_table tr.title td {
+    border-bottom: 1px solid black ;
+}
+table.block_table .line {
+    color: back;
+    line-height: 20px;
+    cursor: default;
+}
+table.block_table .line:hover {
+    background-color: #f0f9ff;
+}
+
+.fail {
+    color: red;
+}
+
+.success {
+    color: black;
+}
+
+td.right {
+    text-align: right;
+}

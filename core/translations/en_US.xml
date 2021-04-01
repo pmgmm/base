@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<tmx version="1.4">
+<header
+    creationtool="self" creationtoolversion="1.0"
+    datatype="PlainText" segtype="sentence"
+    adminlang="pt_PT" srclang="pt_PT"
+    o-tmf="ABCTransMem"/>
+<body>
+    <tu>
+        <tuv xml:lang="pt_PT">
+            <seg>Olá Mundo!</seg>
+        </tuv>
+        <tuv xml:lang="en_US">
+            <seg>Hello world!</seg>
+        </tuv>
+        <tuv xml:lang="en_FR">
+            <seg>Bonjour tout le monde!</seg>
+        </tuv>
+    </tu>
+</body>
+</tmx>

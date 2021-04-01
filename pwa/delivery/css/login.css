@@ -1,0 +1,81 @@
+/* Container */
+.login-container {
+    display: grid;
+    margin: 10px;
+    grid-template-rows: 24px auto 40px;
+    grid-template-columns: auto;
+    grid-template-areas: "languages"
+                         "body";
+    background-color: var(--login-background-color);
+    min-width: 300px;
+    height: 100vh;
+}
+.login-container.hide {
+    display: none;
+}
+/* Idiomas */
+.login-container .languages {
+    grid-area: languages;
+    justify-self: right;
+}
+.login-container .languages.hide {
+    display: none;
+}
+.login-container .languages button {
+    display: block;
+    width: 3rem;
+    background-color: var(--login-background-color);
+    color: var(--button-border-color);
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border: none;
+    margin-bottom: 4px;
+    padding: 3px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+/* Área de conteúdo */
+.login-container .body {
+    grid-area: body;
+    justify-self: center;
+    align-self: center;
+}
+/* Logo */
+.login-container .body .logo {
+    width: min-content;
+    margin: auto;
+}
+.login-container .body .logo img {
+    width: 220px;
+    padding-bottom: 20px;
+}
+
+/* Formulário de login */
+.login-container .body .form {
+    display: flex;
+    flex-direction: column;
+}
+.login-container .body .form.hide {
+    display: none;
+}
+.login-container .body .form input {
+    margin: 6px 0px;
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    border-width: 2px;
+    font-size: 1.4rem;
+}
+.login-container .body .form button {
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 15px 32px;
+    border-width: 2px;
+    font-size: 1.6rem;
+}
+/* --- END */

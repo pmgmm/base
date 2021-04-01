@@ -1,0 +1,52 @@
+.template-list-container {
+    display: grid;
+    margin: 5px 10px;
+    grid-template-rows: 40px 40px 40px 25px auto;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: "logo avatar"
+                         "logo actions"
+                         "menu menu"
+                         "breadcrumb breadcrumb"
+                         "body body";
+    height: calc(100vh - 10px);
+}
+
+.template-list-container .logo {
+    grid-area: logo;
+    height: 75px;
+}
+
+.template-list-container .avatar {
+    grid-area: avatar;
+    display: flex;
+    justify-self: right;
+    margin-top: 8px;
+    height: 40px;
+}
+
+.template-list-container .actions {
+    grid-area: actions;
+    display: flex;
+    justify-self: right;
+    align-self: flex-end;
+    margin-bottom: 2px;
+}
+.template-list-container .actions > * {
+    padding-left: 15px;
+}
+
+.template-list-container .menu {
+    grid-area: menu;
+}
+
+.template-list-container .breadcrumb {
+    grid-area: breadcrumb;
+}
+
+.template-list-container .body {
+    padding-top: 20px;
+    grid-area: body;
+    overflow-x: scroll;
+}
+/* --- END */
+/* Altura ocupada por template (template_height): 5 + 5 + 145 + 20 = 175 */

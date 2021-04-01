@@ -1,0 +1,183 @@
+<!doctype html>
+
+<html lang="pt">
+
+    <head>
+
+        <title>BASE delivery</title>
+        <meta name="Description" content="ááááá">
+        <meta charset="utf-8">    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#025272"/>
+        <base href="/pwa/delivery/">
+        <link rel="stylesheet" href="/framework/3rdparty/font_awesome/css/all.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/todo.css">
+        <link rel="stylesheet" href="css/done.css">
+        <link rel="stylesheet" href="css/aborted.css">
+        <link rel="stylesheet" href="css/alerts.css">
+        <link rel="stylesheet" href="css/layers.css">
+        <link rel="manifest" href="manifest.json">
+        <link rel="shortcut icon" href="custom/default/resources/logo_16.png" type="image/png">    
+        <link rel="apple-touch-icon" href="custom/default/resources/logo_192.png">
+        <script type="text/javascript" src="entities/User.js"></script>
+        <script type="text/javascript" src="entities/Task.js"></script>
+        <script type="text/javascript" src="classes/Config.js"></script>
+        <script type="text/javascript" src="classes/Index.js"></script>
+        <script type="text/javascript" src="classes/IndexedDBWrapper.js"></script>
+        <script type="text/javascript" src="classes/Login.js"></script>
+        <script type="text/javascript" src="helpers/PwaHelper.js"></script>
+        <script type="text/javascript" src="helpers/NotificationHelper.js"></script>
+        <script type="text/javascript" src="helpers/LayerHelper.js"></script>
+        <script type="text/javascript" src="helpers/GpsHelper.js"></script>
+        <script type="text/javascript" src="helpers/TaskHelper.js"></script>
+        <script type="text/javascript" src="languages/en_US.js"></script>
+        <script type="text/javascript" src="languages/es_ES.js"></script>
+        <script type="text/javascript" src="languages/fr_FR.js"></script>
+    </head>
+
+    <body>
+
+        <!-- SHIELD -->
+        <div id="pwa-shield" class="shield"></div>
+        <div id="pwa-loader" class="loader"></div>
+
+        <!-- MESSAGES -->
+        <div id="pwa-message" class="message hide"></div>
+
+        <!-- QUESTIONS -->
+        <div id="pwa-question" class="question hide">
+            <div class="form">
+                <span id="pwa-question-text"></span>
+                <div class="actions">
+                    <button class="touch light hide" id="pwa-question-btn-1"></button>
+                    <button class="touch hide" id="pwa-question-btn-2"></button>
+                    <button class="touch hide" id="pwa-question-btn-3"></button>
+                </div>
+            </div> 
+        </div>
+
+
+        <!-- Barra de Topo -->
+        <div id="pwa-top-bar" class="top-bar hide">
+            <div class="logo"></div>
+            <div class="search"></div>
+            <div id="pwa-top-bar-avatar" class="avatar"></div>
+        </div>
+
+        <!-- Menu de Topo -->
+        <div id="pwa-top-menu" class="top-menu hide">
+            <div class="icon-buttons">
+                <div id="pwa-top-menu-0" class="more icon-button"><i class="touch fas fa-bars fa-2x"></i></div>
+                <div id="pwa-top-menu-1" class="todo icon-button"><i class="touch fas fa-shipping-fast fa-2x"></i></div>
+                <div id="pwa-top-menu-2" class="done icon-button"><i class="touch far fa-thumbs-up fa-2x"></i></div>
+                <div id="pwa-top-menu-3" class="aborted icon-button"><i class="touch far fa-thumbs-down fa-2x"></i></div>
+                <div id="pwa-top-menu-4" class="alerts icon-button"><i class="touch far fa-bell fa-2x"></i></div>
+            </div>
+        </div>
+
+        <!-- Página 0: LOGIN -->
+        <div id="pwa-page-0" class="login-container hide">
+            <div class="languages">
+                <button class="touch" id="btn-pt_PT">PT</button>
+                <button class="touch" id="btn-es_ES">ES</button>
+                <button class="touch" id="btn-fr_FR">FR</button>
+                <button class="touch" id="btn-en_US">EN</button>
+            </div>
+            <div class="body">
+                <div class="logo"><img src="custom/default/resources/logo.svg"></div>
+                <div class="form">
+                    <input class="" type="text" id="user_or_email" autocomplete="off">
+                    <input class="" type="password" id="password" autocomplete="off">
+                    <button class="touch" id="btn-login"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página 1: TODO TASKS -->
+        <div id="pwa-page-1" class="todo-container hide">
+            <div class="body"></div>
+        </div>
+
+         <!-- Página 2: DONE TASKS -->
+        <div id="pwa-page-2" class="done-container hide">
+            <div class="body">
+                <label class="photo" for="photo">Selecionar um arquivo</label>
+                <input id="photo" type="file" accept="image/*" capture="camera" />
+            </div>
+        </div>
+
+        <!-- Página 3: ABORTED TASKS -->
+        <div id="pwa-page-3" class="aborted-container hide">
+            <div class="body">3</div>
+        </div>
+
+        <!-- Página 4: ALERTS & MESSAGES -->
+        <div id="pwa-page-4" class="alerts-container hide">
+            <div class="body">4</div>
+        </div>
+
+        <!-- PWA MENU MORE -->
+        <div id="pwa-top-menu-content" class="pwa-layer left hide">
+            <div class="body">
+                <button id="pwa-top-menu-directions" class="touch"></button>
+                <button id="pwa-top-menu-delivery-mode" class="touch"></button>
+                <button id="pwa-top-menu-order-mode" class="touch"></button>
+                <button id="pwa-top-menu-order-reset" class="touch"></button>
+                <hr>
+                <button id="pwa-top-menu-account" class="touch"></button>
+                <button id="pwa-top-menu-sync" class="touch"></button>
+                <button id="pwa-top-menu-logoff" class="touch"></button>
+                <hr>
+                <button id="pwa-top-menu-install" class="touch hide"></button>
+                <button id="pwa-top-menu-activate-push-notifications" class="touch hide"></button>
+                <button id="pwa-top-menu-deactivate-push-notifications" class="touch hide"></button>
+                <button id="pwa-top-menu-about" class="touch"></button>
+            </div>
+            <div class="handle"></div>
+        </div>
+
+        <!-- TASK MENU MORE -->
+        <div id="task-menu-content" class="pwa-layer bottom hide">
+            <div class="handle"></div>
+            <div class="body">
+                <button class="touch" id="pwa-task-deliver"></button>
+                <hr>
+                <button class="touch" id="pwa-task-activate-proximity"></button>
+                <button class="touch" id="pwa-task-deactivate-proximity"></button>
+            </div>
+        </div>
+
+
+
+        <div id="task-deliver-content" class="pwa-layer top hide">
+            <div class="form">
+                <textarea class="" id="delivery-notes" placeholder="Notas" rows="5" autocomplete="off"></textarea>
+                <div class="actions">
+                    <button class="touch light" id="btn-deliver-cancel"></button>
+                    <button class="touch" id="btn-deliver-confirm"></button>
+                </div>
+            </div>
+            <div class="handle"></div>
+        </div>
+
+        <!-- ABOUT -->
+        <div id="about-content" class="pwa-layer bottom hide">
+            <div class="handle"></div>
+            <div class="body">
+            <div class="line">
+                <span id="about-description" class="text"></span>
+            </div>
+                <div class="line grid-1">
+                    <label id="about-pwa-version" class="label"></label>
+                    <span id="about-pwa-version-value" class="text"></span>
+                    <label id="about-db-version"class="label"></label>
+                    <span id="about-db-version-value" class="text"></span>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

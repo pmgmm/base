@@ -1,0 +1,104 @@
+
+/* VARIÁVEIS */
+:root {
+
+    /* BARRA DE TOPO */ 
+    --top-bar-background-color: #025272;
+    --top-bar-logo-border-color: white;
+    --top-bar-avatar-border-color: white;
+
+    /* MENU DE TOPO */ 
+    --top-menu-backgroud-color: white;
+    --top-menu-button-color: #696969;
+    --top-menu-button-selected-color: #025272;
+    --top-menu-more-button-color: #333;;
+    --top-menu-button-background-color: rgba(2, 82, 114, 0);
+    --top-menu-button-blink-background-color: rgba(2, 82, 114, 0.20);
+    --top-menu-button-hover-color:#025272;
+
+    /* LAYER TOP */
+    --layer-top-background-color: white;
+    --layer-top-label-color: #377690;
+    --layer-top-label-text: #333;
+    --layer-top-button-color: #333;
+    --layer-top-button-hover-background-color: #eaeaea;
+
+    /* LAYER LEFT */
+    --layer-left-background-color: #377690;
+    --layer-left-button-color: white;
+    --layer-left-button-hover-background-color: #025272;
+
+    /* LAYER BOTTOM */
+    --layer-bottom-background-color: white;
+    --layer-bottom-label-color: #377690;
+    --layer-bottom-label-text: #333;
+    --layer-bottom-button-color: #025272;
+    --layer-bottom-button-hover-background-color: #e4edf0;
+
+    /* TODO */
+    --todo-background-color: white;
+    --todo-order-background-color: #e4edf0;
+
+    /* DONE */
+    --done-background-color: #8FBC8F;
+
+    /* ABORTED */
+    --aborted-background-color: #696969;
+
+    /* ALERTS */
+    --alerts-background-color: #c57979;
+
+    /* TASK */
+    --task-default-color: #333;
+    --task-border-color: #7aa4b5;
+    --task-order-color: #a73636;
+    --task-order-hover-color: #900000;
+    --task-estimated-time-color: #a73636;
+    --task-buttons-grp1-color: #377690;
+    --task-buttons-grp1-hover-color: #025272;
+    --task-buttons-grp2-color: #a73636;
+    --task-buttons-grp2-hover-color: #900000;
+    --task-buttons-grp3-color: #367736;
+    --task-buttons-grp3-hover-color: #015301;
+    --task-buttons-grp4-color: #696969;
+    --task-buttons-grp4-hover-color: #333;
+    --task-buttons-blink-color: rgba(2, 82, 114, 0.20);
+    --task-proximity-color: #aaa;
+    --task-proximity-near-color: #a73636;
+
+    /* LOGIN */
+    --login-background-color: white;
+
+    /* --- MENSAGEM */
+    --shield-default-color: #fff;
+    --shield-dark-color: #333;
+
+    /* --- MENSAGEM */
+    --message-color: white;
+    --message-background-color: #696969;
+    --message-error-background-color: #a73636;
+    --message-success-background-color: #367736;
+    --message-information-background-color: #377690;
+
+    /* --- PERGUNTA */
+    --question-border-color: #025272;
+    --question-color: #025272;
+    --question-background-color: white;
+
+    /* GERAL */
+    --input-color: #377690;
+    --input-border-color: #aaa;
+    --input-focus-border-color: #025272;
+    --input-background-color: white;
+    --input-mandatory-border-color: #a73636;
+    --button-background-color: #377690;
+    --button-color: white;
+    --button-border-color: #025272;
+    --button-light-background-color: white;
+    --button-light-color: #377690;
+    --button-light-border-color: #377690;
+    --button-light-hover-color: #025272;
+    --loader-color: #a73636;
+    --placeholder-color: #aaa;
+
+}

@@ -1,0 +1,67 @@
+.template-form-container {
+    display: grid;
+    margin: 5px 10px;
+    grid-template-rows: 40px 40px 40px 25px auto 40px;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: "logo avatar"
+                         "logo actions"
+                         "menu menu"
+                         "breadcrumb breadcrumb"
+                         "body body"
+                         "body-actions body-actions";
+    height: calc(100vh - 10px);
+}
+
+.template-form-container .logo {
+    grid-area: logo;
+    height: 75px;
+}
+
+.template-form-container .avatar {
+    grid-area: avatar;
+    display: flex;
+    justify-self: right;
+    margin-top: 8px;
+    height: 40px;
+}
+
+.template-form-container .actions {
+    grid-area: actions;
+    display: flex;
+    justify-self: right;
+    align-self: flex-end;
+    margin-bottom: 2px;
+}
+.template-form-container .actions > * {
+    padding-left: 15px;
+}
+
+.template-form-container .menu {
+    grid-area: menu;
+}
+
+.template-form-container .breadcrumb {
+    grid-area: breadcrumb;
+}
+
+.template-form-container .body {
+    padding-top: 30px;
+    grid-area: body;
+    overflow-x: scroll;
+}
+
+.template-form-container .body-actions {
+    grid-area: body-actions;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid var(--gray-dark);
+    width: 100%;
+    height: 100%;
+}
+
+.template-form-container .body-actions > * {
+    padding-left: 7px;
+}
+/* --- END */
+/* Altura ocupada por template(template_height): 5 + 5 + 185 + 30 = 225 */

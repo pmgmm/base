@@ -1,0 +1,218 @@
+/**
+ * CSS - DEFAULT - TODO
+ * 
+ * Estilos de página de tarefas TODO
+ *
+ * @pmonteiro (yyyy-mm-dd)
+ */ 
+
+.todo-container {
+    position: fixed;
+    top: 91px;
+    left: 0vw;
+    width: 100vw;
+    min-width: 300px;
+    height: calc(100vh - 91px);
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas: "body";
+    background-color: var(--todo-background-color);
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    transition: top 0.3s;
+}
+.todo-container.order-mode {
+    background-color: var(--todo-order-background-color);
+}
+.todo-container.no-top-bar {
+    top: 51px;
+    height: calc(100vh - 51px);
+}
+.todo-container.swipe {
+    transition: all .3s;
+}
+.todo-container.hide {
+    display: none;
+}
+.todo-container .body {
+    grid-area: body;
+    box-sizing: border-box;
+}
+
+/* Tarefa */
+.todo-container .task {
+    display: grid;
+    width: calc(100% - 32px);
+    grid-template-rows: 20px 30px 30px auto;
+    grid-template-columns: 75px auto 35px;
+    grid-template-areas: "id id id"
+                         "estimated-time icons icons"
+                         "name name name"
+                         "address address proximity";
+    height: min-content;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid var(--task-border-color);
+    border-radius: 4px;
+    margin: 16px;
+    font-size: 1.3rem;
+}
+/* Tarefa em modo de ordenação */
+.todo-container.order-mode .task {
+    grid-template-rows: 20px 30px 30px auto;
+    grid-template-columns: 75px auto 35px;
+    grid-template-areas: "id up down"
+                         "estimated-time estimated-time estimated-time"
+                         "name name name"
+                         "address address address";
+    color: var(--task-default-color);
+    border: 1px solid var(--task-order-color);
+}
+
+/* ID da tarefa */
+.todo-container .id {
+    grid-area: id;
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Hora de entrega da tarefa */
+.todo-container .estimated-time {
+    grid-area: estimated-time;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    color: var(--task-estimated-time-color);
+    align-self: center;
+}
+.todo-container .estimated-time .value-estimated-time {
+  padding-left: 3px;
+}
+
+/* Container de botões */
+.todo-container .icon-buttons {
+    grid-area: icons;
+    align-self: center;
+    justify-self: flex-end;
+}
+
+/* Botões */
+.todo-container .icon-button {
+    position: relative;
+    height: 34px;
+    width: 34px;
+    background-color: rgba(2, 82, 114, 0);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+.todo-container .icon-button.hide {
+    display: none;
+}
+.todo-container .icon-button > * {
+    place-self: center;
+    cursor: pointer;
+}
+.todo-container .icon-button i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Nome */
+.todo-container .name {
+    grid-area: name;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-top: 3px;
+    align-self: center;
+}
+
+/* Morada */
+.todo-container .address {
+    grid-area: address;
+    align-self: center;
+}
+
+/* Botões de ordenação */
+.todo-container .icon-button.up {
+    display: none;
+    grid-area: up;
+    align-self: center;
+    justify-self: flex-end;
+    color: var(--task-order-color);
+    cursor: pointer;
+}
+.todo-container .icon-button.down {
+    display: none;
+    grid-area: down;
+    place-self: center;
+    color: var(--task-order-color);
+    cursor: pointer;
+}
+.todo-container.order-mode .icon-buttons {
+    display: none;
+}
+.todo-container.order-mode .icon-button.up, .todo-container.order-mode .icon-button.down {
+    display: block;
+}
+
+/* Indicador de proximidade */
+.todo-container .proximity {
+    grid-area: proximity;
+    align-self: center;
+    justify-self: center;
+    color: var(--task-proximity-color);
+}
+.todo-container .proximity.hide, .todo-container.order-mode .proximity {
+    display: none;
+}
+.todo-container .proximity.near {
+    color: var(--task-proximity-near-color);
+}
+
+/* Cores de botões */
+.todo-container .icon-buttons .notes,
+.todo-container .icon-buttons .gps,
+.todo-container .icon-buttons .more {
+    color: var(--task-buttons-grp1-color);
+}
+.todo-container .icon-buttons .alerts,
+.todo-container .icon-button.up, 
+.todo-container .icon-button.down {
+    color: var(--task-buttons-grp2-color);
+}
+.todo-container .icon-buttons .phone {
+    color: var(--task-buttons-grp3-color);
+}
+.todo-container .icon-buttons .landmark {
+    color: var(--task-buttons-grp4-color);
+}
+
+/* Blink / hover de botões */
+.todo-container .icon-button.blink {
+    background-color: var(--task-buttons-blink-color);
+}
+@media (hover:hover) {
+    .todo-container .icon-button.up:hover,
+    .todo-container .icon-button.down:hover{
+        color: var(--task-order-hover-color);
+    }
+    .todo-container .icon-buttons .notes:hover,
+    .todo-container .icon-buttons .gps:hover,
+    .todo-container .icon-buttons .more:hover {
+        color: var(--task-buttons-grp1-hover-color);
+    }
+    .todo-container .icon-buttons .alerts:hover {
+        color: var(--task-buttons-grp2-hover-color);
+    }
+    .todo-container .icon-buttons .phone:hover {
+        color: var(--task-buttons-grp3-hover-color);
+    }
+    .todo-container .icon-buttons .landmark:hover {
+        color: var(--task-buttons-grp4-hover-color);
+    }
+}
+/* --- END */

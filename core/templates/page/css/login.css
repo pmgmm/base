@@ -1,0 +1,57 @@
+.template-login-container {
+    display: grid;
+    margin: 10px;
+    grid-template-rows: min-content auto min-content;
+    grid-template-columns: auto;
+    grid-template-areas: "actions"  
+                         "body"
+                         "app-info";
+    height: calc(100vh - 20px);
+}
+
+.template-login-container .actions {
+    grid-area: actions;
+    display: flex;
+    justify-self: right;
+    align-self: flex-start;
+}
+.template-login-container .actions > * {
+    padding-left: 15px;
+}
+
+.template-login-container .login {
+    grid-area: body;
+    justify-self: center;
+    align-self: center;
+}
+
+.template-login-container .login .logo {
+    margin: auto;
+    padding: 15px 30px 10px;
+    width: 160px;
+}
+
+.template-login-container .login .body {
+   padding: 0px 10px;
+}
+.template-login-container .login .body fwk-input {
+    padding-top: 10px;
+}
+
+.template-login-container .login .body-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 10px 10px;
+}
+.template-login-container .login .body-actions * {
+    padding-left: 7px;
+}
+
+.template-login-container .app-info {
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+.template-login-container .app-info *:nth-child(2n+1) {
+   padding-right: 5px;
+}
+/* --- END */

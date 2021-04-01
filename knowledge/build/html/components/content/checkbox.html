@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Check Box &mdash; Knowledge Tree 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Date Time" href="datetime.html" />
+    <link rel="prev" title="Button" href="button.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #377690" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Knowledge Tree
+          
+
+          
+            
+            <img src="../../_static/base_128.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Custom Web Components</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../important.html">IMPORTANTE LER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="askbox.html">Ask Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="box.html">Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="breadcrumb.html">Bread Crumb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="button.html">Button</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Check Box</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requisitos">Requisitos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#html-do-componente-tag">Html do componente (tag)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funcao-de-componente">Função de componente</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#funcionalidades">Funcionalidades</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#atribuir-valor">Atribuir valor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ler-valor">Ler valor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mostrar-esconder">Mostrar / esconder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#habilitar-inibir">Habilitar / inibir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ler-estados">Ler estados</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#referencias">Referências</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="datetime.html">Date Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dragsropselect.html">Drag &amp; Drop Select</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropbutton.html">Drop Button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="formbutton.html">Form Button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftabs.html">Float Tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="htabs.html">Horizontal Tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="label.html">Label</a></li>
+<li class="toctree-l2"><a class="reference internal" href="link.html">Link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html">Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="messagebox.html">Message Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modal.html">Modal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiselect.html">Multi Select</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optionbutton.html">Option Button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radiobutton.html">Radio Button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section.html">Section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="select.html">Select</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shield.html">Shield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table.html">Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="textarea.html">Text Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upload.html">Upload</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../helpers/index.html">Helpers</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../help/sphinx.html">Sphinx Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">TODO list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">INDEX</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowledge Tree</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Custom Web Components</a> &raquo;</li>
+        
+      <li>Check Box</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/components/content/checkbox.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="check-box">
+<span id="checkbox"></span><span id="index-0"></span><h1>Check Box<a class="headerlink" href="#check-box" title="Permalink to this headline">¶</a></h1>
+<p>Este componente permuta entre os estados <code class="docutils literal notranslate"><span class="pre">true</span></code> e <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<img alt="../../_images/checkbox.png" src="../../_images/checkbox.png" />
+<div class="section" id="requisitos">
+<h2>Requisitos<a class="headerlink" href="#requisitos" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="71%" />
+<col width="29%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/framework/components/checkbox.js</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/framework/components/shared.js</span></code></td>
+<td><a class="reference internal" href="../important.html#jsshared"><span class="std std-ref">JS Shared</span></a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">As páginas geradas por <a class="reference internal" href="../../helpers/php/pagehelper.html#phppagehelper"><span class="std std-ref">PHP PageHelper</span></a> fazem, por defeito, o carregamento dos componentes necessários.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="html-do-componente-tag">
+<h2>Html do componente (tag)<a class="headerlink" href="#html-do-componente-tag" title="Permalink to this headline">¶</a></h2>
+<div class="code html highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">checkbox</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">span</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;information&quot;</span><span class="o">&gt;</span><span class="n">texto</span><span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">checkbox</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="40%" />
+<col width="11%" />
+<col width="23%" />
+<col width="7%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Atributo</th>
+<th class="head">Descrição</th>
+<th class="head">Obrigatório</th>
+<th class="head">Opções</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">id</span></code></td>
+<td>Identificador único do componente</td>
+<td>Sim (?)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">label</span></code></td>
+<td>Label do componente</td>
+<td>Sim</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">value</span></code></td>
+<td>Estado inicial</td>
+<td>Não</td>
+<td>true”, “false”</td>
+<td>“false”</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">disable</span></code></td>
+<td>Inibe componente</td>
+<td>Não</td>
+<td>“true”, “false”</td>
+<td>“false”</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">hide</span></code></td>
+<td>Esconde componente</td>
+<td>Não</td>
+<td>“true”, “false”</td>
+<td>“false”</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">color</span></code></td>
+<td>Cor base do componente</td>
+<td>Não</td>
+<td>“blue”, “gray”, “white”</td>
+<td>“gray”</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">simple</span></code></td>
+<td>Reduz o componente à checkbox sem margens</td>
+<td>Não</td>
+<td>“false”, “true”</td>
+<td>“false”</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">tooltip-position</span></code></td>
+<td>Posição do tooltip</td>
+<td>Não</td>
+<td>“left”, “right”</td>
+<td>“right”</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">function</span></code></td>
+<td>Função a executar no evento onchange</td>
+<td>Não</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">O atributo <code class="docutils literal notranslate"><span class="pre">id</span></code> só é obrigatório no caso de ser necessária a identificação do componente para interacção com qualquer uma das suas funcionalidades.</p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="36%" />
+<col width="19%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Slot</th>
+<th class="head">Descrição</th>
+<th class="head">Obrigatório</th>
+<th class="head">Observações</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">information</span></code></td>
+<td>Tooltip de informação</td>
+<td>Não</td>
+<td>Admite html</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="funcao-de-componente">
+<h2>Função de componente<a class="headerlink" href="#funcao-de-componente" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">O atributo <code class="docutils literal notranslate"><span class="pre">function</span></code> destina-se a definir a chamada a uma função global ou a um método de classe.</div>
+<div class="line">A função recebe, como parâmetro único, o novo estado (<code class="docutils literal notranslate"><span class="pre">true``ou</span> <span class="pre">``false</span></code>).</div>
+<div class="line">Os formatos permitidos são:</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="47%" />
+<col width="53%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Função global (formato)</th>
+<th class="head">Método de classe (formato)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>function = “onchange”</td>
+<td>function = “obj.onchange”</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<div class="section" id="funcionalidades">
+<h2>Funcionalidades<a class="headerlink" href="#funcionalidades" title="Permalink to this headline">¶</a></h2>
+<p>Assumindo que exite um objecto instanciado com o componente:</p>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">obj_checkbox</span> <span class="o">=</span> <span class="n">FormHelper</span><span class="o">.</span><span class="n">getComponent</span><span class="p">(</span><span class="s1">&#39;fwk_checkbox&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="section" id="atribuir-valor">
+<h3>Atribuir valor<a class="headerlink" href="#atribuir-valor" title="Permalink to this headline">¶</a></h3>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj_checkbox</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">false</span> <span class="o">/</span> <span class="n">false</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ler-valor">
+<h3>Ler valor<a class="headerlink" href="#ler-valor" title="Permalink to this headline">¶</a></h3>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">value</span> <span class="o">=</span> <span class="n">obj_checkbox</span><span class="o">.</span><span class="n">value</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mostrar-esconder">
+<h3>Mostrar / esconder<a class="headerlink" href="#mostrar-esconder" title="Permalink to this headline">¶</a></h3>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj_checkbox</span><span class="o">.</span><span class="n">hide</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+<span class="n">obj_checkbox</span><span class="o">.</span><span class="n">hide</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="habilitar-inibir">
+<h3>Habilitar / inibir<a class="headerlink" href="#habilitar-inibir" title="Permalink to this headline">¶</a></h3>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj_checkbox</span><span class="o">.</span><span class="n">disable</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+<span class="n">obj_checkbox</span><span class="o">.</span><span class="n">disable</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ler-estados">
+<h3>Ler estados<a class="headerlink" href="#ler-estados" title="Permalink to this headline">¶</a></h3>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">is_hide</span> <span class="o">=</span> <span class="n">obj_checkbox</span><span class="o">.</span><span class="n">hide</span><span class="p">;</span>
+<span class="n">let</span> <span class="n">is_disable</span> <span class="o">=</span> <span class="n">obj_checkbox</span><span class="o">.</span><span class="n">disable</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../../helpers/js/formhelper.html#jsformhelper"><span class="std std-ref">JS Form Helper</span></a> é uma classe de auxílio às operações sobre formulários.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="datetime.html" class="btn btn-neutral float-right" title="Date Time" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="button.html" class="btn btn-neutral float-left" title="Button" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Pedro Monteiro.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

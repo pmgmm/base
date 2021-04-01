@@ -1,0 +1,78 @@
+/**
+ * CSS - Grid de estrutura para formulários
+ *  
+ * @pmonteiro (yyyy-mm-dd))
+ */
+
+
+/* Corpo principal */
+.grid-structure {
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-column-gap: 100px;
+    padding: 0px 10px;
+}
+.grid-structure.no-padding {
+    padding: 5px 0px 0px;
+}
+
+/* Colunas do corpo principal */
+.grid-structure.one-column {
+    grid-template-columns: max-content;
+}
+.grid-structure.two-columns {
+    grid-template-columns: max-content max-content;
+}
+.grid-structure.three-columns {
+    grid-template-columns: max-content max-content max-content;
+}
+
+/* Coluna */
+.grid-structure .grid-column {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-columns: min-content auto;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+.grid-structure .grid-column.small-row-gap {
+    grid-row-gap: 5px;
+}
+
+/* Estrutura de linha */
+.grid-structure .grid-cell-label {
+    align-self: center;
+    justify-self: right;
+}
+.grid-structure .grid-cell-component {
+    align-self: center;
+}
+.grid-structure .grid-cell-multi-component {
+    display: flex;
+    align-self: center;
+}
+.grid-structure .grid-cell-multi-component {
+    align-self: center;
+    justify-self: left;
+}
+.grid-structure .grid-row {
+    grid-column: 1 / 3;
+    grid-row-gap: 5px;
+    min-height: var(--component-height);
+}
+.grid-structure .grid-cell-multi-actions {
+    grid-column: 1 / 3;
+    display: flex;
+    align-self: center;
+}
+.grid-structure .grid-cell-multi-actions:not(.right) > * {
+    padding-right: 7px;
+}
+.grid-structure .grid-cell-multi-actions.right {
+    justify-self: right;
+}
+.grid-structure .grid-cell-multi-actions.right > * {
+    padding-left: 7px;
+}
+/* --- END */

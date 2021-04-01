@@ -1,0 +1,23 @@
+.wy-nav-content {
+    max-width: 100%;
+}
+
+.highlight-rst.notranslate, .highlight-default.notranslate {
+    min-width: 500px;
+    width: max-content;
+    max-width: 100%
+}
+
+.admonition {
+    min-width: 500px;
+    width: max-content;
+    max-width: 100%
+}
+
+.wy-menu.wy-menu-vertical {
+    white-space: nowrap;
+}
+
+.rst-content img {
+    max-width: none;
+}

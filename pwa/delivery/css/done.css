@@ -1,0 +1,39 @@
+/**
+ * CSS - DEFAULT - DONE
+ * 
+ * Estilos de página de tarefas DONE
+ *
+ * @pmonteiro (yyyy-mm-dd)
+ */ 
+
+ .done-container {
+    position: fixed;
+    top: 91px;
+    left: 0vw;
+    width: 100vw;
+    min-width: 300px;
+    height: calc(100vh - 91px);
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas: "body";
+    background-color: var(--done-background-color);
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    transition: top 0.3s;
+}
+.done-container.no-top-bar {
+    top: 51px;
+    height: calc(100vh - 51px);
+}
+.done-container.swipe {
+    transition: all .3s;
+}
+.done-container.hide {
+    display: none;
+}
+.done-container .body {
+    grid-area: body;
+    box-sizing: border-box;
+}
+/* --- END */

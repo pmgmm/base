@@ -1,0 +1,92 @@
+:host {
+    --color-tooltip-error: var(--red-medium); 
+    --color-tooltip-error-hover: var(--red-dark); 
+}
+
+.container .tooltips {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: -13px;
+}
+.container.gray, .container.white {
+    --color-tooltip-information: var(--gray-medium);
+    --color-tooltip-information-hover: var(--gray-dark);
+}
+.container.blue {
+    --color-tooltip-information: var(--blue-medium);
+    --color-tooltip-information-hover: var(--blue-dark);
+}
+  
+.container .tooltips .tooltip, .container .tooltips slot[name=information]::slotted(*) {
+    position: absolute;
+    z-index: 30;
+    display: none;
+    font-size: 11px;
+    box-sizing: border-box;
+    width: max-content;
+    padding: 6px 8px;
+    min-width: 60px;
+    box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.35);
+}
+.container .tooltips.right .tooltip, .container .tooltips.right slot[name=information]::slotted(*) {
+    left: calc(100% + 3px);
+}
+.container .tooltips.left .tooltip, .container .tooltips.left slot[name=information]::slotted(*) {
+    right: calc(100% + 3px);
+}
+
+/* info */
+.container .tooltips slot[name=information]::slotted(*) {
+    border: 1px solid var(--color-tooltip-information);
+    background-color: var(--color-tooltip-information);
+    color: white;
+}
+/* icone de info */
+.container .tooltips div.information {
+    width: 10px;
+    height: 10px;
+    line-height: 16px;
+    background-color: var(--color-tooltip-information);
+    border-radius: 50%;
+    margin-bottom: 2px;
+}
+.container .tooltips div.information:hover {
+    background-color: var(--color-tooltip-information-hover);
+}
+.container .tooltips div.information.hide {
+    display: none;
+}
+/* área de info */
+.container .tooltips div.information:hover slot[name=information]::slotted(*) {
+    background-color: var(--color-tooltip-information-hover);
+    display: block;
+}
+
+
+/* error */
+.container .tooltips .tooltip.error {
+    border: 1px solid var(--color-tooltip-error);
+    background-color: var(--color-tooltip-error);
+    color: white;
+}
+/* icone de erro */
+.container .tooltips div.error {
+    width: 10px;
+    height: 10px;
+    line-height: 16px;
+    background-color: var(--color-tooltip-error);
+    border-radius: 50%;
+    margin-bottom: 2px;
+}
+.container .tooltips div.error:hover {
+    background-color: var(--color-tooltip-error-hover);
+}
+.container .tooltips div.error.hide {
+    display: none;
+}
+/* área de erro */
+.container .tooltips div.error:not(.empty):hover .tooltip {
+    background-color: var(--color-tooltip-error-hover);
+    display: block;
+    }

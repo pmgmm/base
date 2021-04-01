@@ -1,0 +1,930 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Table &mdash; Knowledge Tree 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Text" href="text.html" />
+    <link rel="prev" title="Shield" href="shield.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #377690" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Knowledge Tree
+          
+
+          
+            
+            <img src="../../_static/base_128.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Custom Web Components</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../important.html">IMPORTANTE LER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="askbox.html">Ask Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="box.html">Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="breadcrumb.html">Bread Crumb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="button.html">Button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="checkbox.html">Check Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datetime.html">Date Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dragsropselect.html">Drag &amp; Drop Select</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropbutton.html">Drop Button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="formbutton.html">Form Button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftabs.html">Float Tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="htabs.html">Horizontal Tabs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image.html">Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="input.html">Input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="label.html">Label</a></li>
+<li class="toctree-l2"><a class="reference internal" href="link.html">Link</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html">Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="messagebox.html">Message Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modal.html">Modal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multiselect.html">Multi Select</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optionbutton.html">Option Button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radiobutton.html">Radio Button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section.html">Section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="select.html">Select</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shield.html">Shield</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Table</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requisitos">Requisitos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#html-do-componente-tag">Html do componente (tag)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slot-config">Slot config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slot-columns">Slot columns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slot-table-top-action">Slot table-top-action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slot-table-bulk-action">Slot table-bulk-action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slot-rows">Slot rows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slot-filter-top-action">Slot filter-top-action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slot-filter-component">Slot filter-component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slot-slot-filter-action">Slot slot filter-action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#exemplos">Exemplos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#carregamento-html">Carregamento html</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#carregamento-javascript">Carregamento Javascript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#carregamento-ajax">Carregamento Ajax</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#funcionalidades">Funcionalidades</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#seleccionar-nao-seleccionados">Seleccionar não seleccionados</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#desseleccionar-seleccionados">Desseleccionar seleccionados</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ler-identificadores-de-linhas-seleccionadas">Ler identificadores de linhas seleccionadas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ler-atributos-extra-de-linha">Ler atributos extra de linha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mostrar-esconder">Mostrar / esconder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#habilitar-inibir">Habilitar / inibir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ler-estados">Ler estados</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#referencias">Referências</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="text.html">Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="textarea.html">Text Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upload.html">Upload</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../helpers/index.html">Helpers</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../help/sphinx.html">Sphinx Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todo.html">TODO list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">INDEX</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Knowledge Tree</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Custom Web Components</a> &raquo;</li>
+        
+      <li>Table</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/components/content/table.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="table">
+<span id="index-0"></span><span id="id1"></span><h1>Table<a class="headerlink" href="#table" title="Permalink to this headline">¶</a></h1>
+<p>Este componente mostra uma lista de registos, possibilita filtro, ordena e executa procedimentos sobre o seu conteúdo.</p>
+<img alt="../../_images/table.png" src="../../_images/table.png" />
+<div class="section" id="requisitos">
+<h2>Requisitos<a class="headerlink" href="#requisitos" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="70%" />
+<col width="30%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/framework/components/table.js</span></code></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/framework/components/dropbutton.js</span></code></td>
+<td><a class="reference internal" href="dropbutton.html#dropbutton"><span class="std std-ref">Drop Button</span></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/framework/components/checkbox.js</span></code></td>
+<td><a class="reference internal" href="checkbox.html#checkbox"><span class="std std-ref">Check Box</span></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">/framework/components/shield.js</span></code></td>
+<td><a class="reference internal" href="shield.html#shield"><span class="std std-ref">Shield</span></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">/framework/components/shared.js</span></code></td>
+<td><a class="reference internal" href="../important.html#jsshared"><span class="std std-ref">JS Shared</span></a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">As páginas geradas por <a class="reference internal" href="../../helpers/php/pagehelper.html#phppagehelper"><span class="std std-ref">PHP PageHelper</span></a> fazem, por defeito, o carregamento dos componentes necessários.</p>
+</div>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<div class="last line-block">
+<div class="line">Utiliza as variável de sessionStorage com o nome igual ao id do componente para armazena o último filtro utilizado (exemplo: roles_list).</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="html-do-componente-tag">
+<h2>Html do componente (tag)<a class="headerlink" href="#html-do-componente-tag" title="Permalink to this headline">¶</a></h2>
+<div class="code html highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">table</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">div</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;config&quot;</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">div</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;columns&quot;</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;table-top-action&quot;</span><span class="o">&gt;&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span><span class="o">&gt;</span>
+    <span class="o">...</span>
+    <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;table-bulk-action&quot;</span><span class="o">&gt;&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span><span class="o">&gt;</span>
+    <span class="o">...</span>
+    <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;filter-top-action&quot;</span><span class="o">&gt;&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span><span class="o">&gt;</span>
+    <span class="o">...</span>
+    <span class="o">&lt;</span><span class="n">div</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;filter-component&quot;</span><span class="o">&gt;&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+    <span class="o">...</span>
+    <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;filter-action&quot;</span><span class="o">&gt;&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span><span class="o">&gt;</span>
+    <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">table</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="43%" />
+<col width="14%" />
+<col width="19%" />
+<col width="9%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Atributo</th>
+<th class="head">Descrição</th>
+<th class="head">Obrigatório</th>
+<th class="head">Opções</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">id</span></code></td>
+<td>Identificador único do componente</td>
+<td>Sim (?)</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">disable</span></code></td>
+<td>Inibe componente</td>
+<td>Não</td>
+<td>“true”, “false”</td>
+<td>“false”</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">hide</span></code></td>
+<td>Esconde componente</td>
+<td>Não</td>
+<td>“true”, “false”</td>
+<td>“false”</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">color</span></code></td>
+<td>Cor base do componente</td>
+<td>Não</td>
+<td>“blue”, “gray”</td>
+<td>“gray”</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">O atributo <code class="docutils literal notranslate"><span class="pre">id</span></code> só é obrigatório no caso de ser necessária a identificação do componente para interacção com qualquer uma das suas funcionalidades.</p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="31%" />
+<col width="12%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Slot</th>
+<th class="head">Descrição</th>
+<th class="head">Obrigatório</th>
+<th class="head">Observações</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">config</span></code></td>
+<td>Configuração geral da tabela</td>
+<td>sim</td>
+<td><a class="reference internal" href="#table-config-slot"><span class="std std-ref">Slot config</span></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">columns</span></code></td>
+<td>Configuralçao das colunas</td>
+<td>Sim</td>
+<td><a class="reference internal" href="#table-columns-slot"><span class="std std-ref">Slot columns</span></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">table-top-action</span></code></td>
+<td>Acções de topo da tabela</td>
+<td>Não</td>
+<td><a class="reference internal" href="#table-top-action-slot"><span class="std std-ref">Slot table-top-action</span></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">table-bulk-action</span></code></td>
+<td>Acções de grupo da tabela</td>
+<td>Não</td>
+<td><a class="reference internal" href="#table-bulk-action-slot"><span class="std std-ref">Slot table-bulk-action</span></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">rows</span></code></td>
+<td>Linhas de dados</td>
+<td>Não</td>
+<td><a class="reference internal" href="#table-rows-slot"><span class="std std-ref">Slot rows</span></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">filter-top-action</span></code></td>
+<td>Acções de topo do filtro</td>
+<td>Não</td>
+<td><a class="reference internal" href="#filter-top-action-slot"><span class="std std-ref">Slot filter-top-action</span></a></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">filter-component</span></code></td>
+<td>Componentes do filtro</td>
+<td>Sim</td>
+<td><a class="reference internal" href="#filter-component-slot"><span class="std std-ref">Slot filter-component</span></a></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">filter-action</span></code></td>
+<td>Acções do filtro</td>
+<td>Sim</td>
+<td><a class="reference internal" href="#filter-action-slot"><span class="std std-ref">Slot slot filter-action</span></a></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p>A ordem das slots no componente é, obrigatóriamente, a seguinte:</p>
+<ol class="last arabic simple">
+<li><code class="docutils literal notranslate"><span class="pre">config</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">columns</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">table-top-action</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">table-bulk-action</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">rows</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">filter-top-action</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">filter-component</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">filter-action</span></code></li>
+</ol>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="slot-config">
+<span id="table-config-slot"></span><h2>Slot config<a class="headerlink" href="#slot-config" title="Permalink to this headline">¶</a></h2>
+<p>A slot <code class="docutils literal notranslate"><span class="pre">config</span></code> é um objecto. Cada propriedade do objecto corresponde a um atributo da tabela.</p>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span>{&quot;filter&quot;:???, &quot;actions&quot;:???, &quot;bulk&quot;:???, &quot;row_actions&quot;:???, &quot;rows&quot;:???, &quot;template_height&quot;:???, &quot;page&quot;:???}
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="43%" />
+<col width="12%" />
+<col width="12%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Atributo</th>
+<th class="head">Descrição</th>
+<th class="head">Obrigatório</th>
+<th class="head">Opções</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">filter</span></code></td>
+<td>Com filtro</td>
+<td>Não</td>
+<td>true, false</td>
+<td>false</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">actions</span></code></td>
+<td>Com acções de topo</td>
+<td>Não</td>
+<td>true, false</td>
+<td>false</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">bulk</span></code></td>
+<td>Com acções de grupo</td>
+<td>Não</td>
+<td>true, false</td>
+<td>false</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">row_actions</span></code></td>
+<td>Com acções de linha</td>
+<td>Não</td>
+<td>true, false</td>
+<td>false</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">rows</span></code></td>
+<td>Mínimo de linhas visíveis</td>
+<td>Não</td>
+<td>1, 2, …</td>
+<td>—</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">template_height</span></code></td>
+<td><div class="first last line-block">
+<div class="line">Acompanha o footer da página</div>
+<div class="line">Define a altura ocupada pelo template</div>
+</div>
+</td>
+<td>Não</td>
+<td>1, 2, …</td>
+<td>175</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">page</span></code></td>
+<td>Paginação (nº de linhas)</td>
+<td>Não</td>
+<td>1, 2, …</td>
+<td>calculadas</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="slot-columns">
+<span id="table-columns-slot"></span><h2>Slot columns<a class="headerlink" href="#slot-columns" title="Permalink to this headline">¶</a></h2>
+<p>A slot <code class="docutils literal notranslate"><span class="pre">columns</span></code> é um objecto. Cada propriedade do objecto corresponde a uma coluna da tabela.</p>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span>{&quot;alias.column&quot;: {&quot;title&quot;: &quot;???&quot;, &quot;width&quot;:???, &quot;order&quot;:???, &quot;tooltip&quot;:???, align&quot;:&quot;???&quot;},
+ ...,
+ &quot;_actions&quot;: {&quot;width&quot;:???, align&quot;:&quot;???&quot;}
+}
+</pre></div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="31%" />
+<col width="11%" />
+<col width="26%" />
+<col width="10%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Atributo</th>
+<th class="head">Descrição</th>
+<th class="head">Obrigatório</th>
+<th class="head">Opções</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">alias.column</span></code></td>
+<td>Correspondência com DB</td>
+<td>Sim</td>
+<td>Não</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">title</span></code></td>
+<td>Título da coluna</td>
+<td>Não</td>
+<td>true, false</td>
+<td>false</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">width</span></code></td>
+<td>Largura da coluna</td>
+<td>Não</td>
+<td>true, false</td>
+<td>false</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">order</span></code></td>
+<td>Coluna com ordenação</td>
+<td>Não</td>
+<td>true, false</td>
+<td>false</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">tooltip</span></code></td>
+<td>Coluna com tooltip</td>
+<td>Não</td>
+<td>true, false</td>
+<td>false</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">align</span></code></td>
+<td>Alinhamento do conteúdo</td>
+<td>Não</td>
+<td>“left”, “center”, “right”</td>
+<td>“left”</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">_actions</span></code></td>
+<td>Coluna para acções de linha</td>
+<td>Não</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="slot-table-top-action">
+<span id="table-top-action-slot"></span><h2>Slot table-top-action<a class="headerlink" href="#slot-table-top-action" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">A slot <code class="docutils literal notranslate"><span class="pre">table-top-action</span></code> é um componente, habitualmente um <a class="reference internal" href="button.html#button"><span class="std std-ref">Button</span></a> ou <a class="reference internal" href="dropbutton.html#dropbutton"><span class="std std-ref">Drop Button</span></a>.</div>
+<div class="line">Existirá uma slot deste tipo para cada componente que se pretenda adicionar à área de acções no topo a tabela.</div>
+</div>
+<div class="code html highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;table-top-action&quot;</span><span class="o">&gt;&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="slot-table-bulk-action">
+<span id="table-bulk-action-slot"></span><h2>Slot table-bulk-action<a class="headerlink" href="#slot-table-bulk-action" title="Permalink to this headline">¶</a></h2>
+<p>A slot <code class="docutils literal notranslate"><span class="pre">table-bulk-action</span></code> é um componente, habitualmente um <a class="reference internal" href="button.html#button"><span class="std std-ref">Button</span></a>.
+| Existirá uma slot deste tipo para cada componente que se pretenda adicionar ao <a class="reference internal" href="dropbutton.html#dropbutton"><span class="std std-ref">Drop Button</span></a> de acções de grupo.</p>
+<div class="code html highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;table-bulk-action&quot;</span><span class="o">&gt;&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="slot-rows">
+<span id="table-rows-slot"></span><h2>Slot rows<a class="headerlink" href="#slot-rows" title="Permalink to this headline">¶</a></h2>
+<p>A slot <code class="docutils literal notranslate"><span class="pre">rows</span></code> é um array de objectos usado apenas para carregamento html . Cada objecto corresponde a uma linha de dados e tem o seguinte formato:</p>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span>{&quot;permissions&quot;:[&quot;?,?&quot;],
+ &quot;key&quot;:&quot;???&quot;,
+ &quot;values&quot;:{&quot;alias.column&quot;:???, ...},
+ &quot;_data&quot;: {&quot;attr1&quot;: true, &quot;attr2&quot;: [&quot;val1&quot;, &quot;val2&quot;], &quot;attr3&quot;: {&quot;at1&quot;: ?, &quot;at2&quot;: &quot;?&quot;}},
+ &quot;_actions&quot;: [&quot;component&quot;,...&quot;]
+ }
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<div class="last line-block">
+<div class="line">Se as linhas tiverem origem num array (backend), as aspas ( <strong>“</strong> ) e tags( <strong>&lt;?&gt;</strong> ) têm de ter especial atenção.</div>
+<div class="line">Exemplo php: <strong>json_encode($table_rows, JSON_HEX_QUOT | JSON_HEX_TAG)</strong></div>
+</div>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="36%" />
+<col width="13%" />
+<col width="24%" />
+<col width="8%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Atributo</th>
+<th class="head">Descrição</th>
+<th class="head">Obrigatório</th>
+<th class="head">Opções</th>
+<th class="head">Default</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">permissions</span></code></td>
+<td>Permissões para operações bulk</td>
+<td>Não</td>
+<td>definidas livremente</td>
+<td>todas</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">key</span></code></td>
+<td>Identificador único da linha</td>
+<td>Sim</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">values</span></code></td>
+<td>Valores para colunas</td>
+<td>Sim</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">alias.column</span></code></td>
+<td>Correspondência com DB</td>
+<td>Sim</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">_data</span></code></td>
+<td>Conjunto extra de atributos</td>
+<td>Não</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">_actions</span></code></td>
+<td>Acções para linha</td>
+<td>Não</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">O componente disponibiliza uma funcionalidade para devolver o conjunto extra de atributos que sejam acrescentados a cada uma das linhas.</p>
+</div>
+</div>
+<div class="section" id="slot-filter-top-action">
+<span id="filter-top-action-slot"></span><h2>Slot filter-top-action<a class="headerlink" href="#slot-filter-top-action" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">A slot <code class="docutils literal notranslate"><span class="pre">filter-top-action</span></code> é um componente, habitualmente um <a class="reference internal" href="button.html#button"><span class="std std-ref">Button</span></a> ou <a class="reference internal" href="dropbutton.html#dropbutton"><span class="std std-ref">Drop Button</span></a>.</div>
+<div class="line">Existirá uma slot deste tipo para cada componente que se pretenda adicionar à área de acções no topo do filtro.</div>
+</div>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;filter-top-action&quot;</span><span class="o">&gt;&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="slot-filter-component">
+<span id="filter-component-slot"></span><h2>Slot filter-component<a class="headerlink" href="#slot-filter-component" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">A slot <code class="docutils literal notranslate"><span class="pre">filter-component</span></code> é um componente ou um agrupador de componentes.</div>
+<div class="line">Admite html.</div>
+<div class="line">Existirá uma slot deste tipo para cada componente que se pretenda adicionar à área de filtro.</div>
+</div>
+<div class="code html highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;filter-top-action&quot;</span><span class="o">&gt;&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="n">div</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;filter-component&quot;</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">label</span><span class="o">&gt;&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">label</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span><span class="o">&gt;&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="slot-slot-filter-action">
+<span id="filter-action-slot"></span><h2>Slot slot filter-action<a class="headerlink" href="#slot-slot-filter-action" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">A slot <code class="docutils literal notranslate"><span class="pre">filter-top-action</span></code> é um componente, habitualmente um <a class="reference internal" href="formbutton.html#formbutton"><span class="std std-ref">Form Button</span></a>.</div>
+<div class="line">Existirá uma slot deste tipo para cada componente que se pretenda adicionar à área de acções do filtro.</div>
+</div>
+<div class="code html highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;filter-action&quot;</span><span class="o">&gt;&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">component</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="exemplos">
+<h2>Exemplos<a class="headerlink" href="#exemplos" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="carregamento-html">
+<h3>Carregamento html<a class="headerlink" href="#carregamento-html" title="Permalink to this headline">¶</a></h3>
+<div class="code html highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">table</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;roles_list&quot;</span><span class="o">&gt;</span>
+
+
+
+    <span class="o">&lt;</span><span class="n">div</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;config&quot;</span><span class="o">&gt;</span><span class="p">{</span><span class="s2">&quot;filter&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span> <span class="s2">&quot;actions&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span> <span class="s2">&quot;bulk&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span> <span class="s2">&quot;row_actions&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="n">div</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;columns&quot;</span><span class="o">&gt;</span><span class="p">{</span><span class="s2">&quot;sr.name&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;NOME&quot;</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">:</span><span class="mi">230</span><span class="p">,</span> <span class="s2">&quot;order&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">},</span>
+                         <span class="s2">&quot;sr.description&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;DESCRIÇÃO&quot;</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">:</span><span class="mi">400</span><span class="p">,</span> <span class="s2">&quot;tooltip&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">},</span>
+                         <span class="s2">&quot;sr.active&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;ATIVO&quot;</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">:</span><span class="mi">60</span><span class="p">,</span> <span class="s2">&quot;align&quot;</span><span class="p">:</span><span class="s2">&quot;center&quot;</span><span class="p">},</span>
+                          <span class="s2">&quot;_actions&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;width&quot;</span><span class="p">:</span><span class="mi">130</span><span class="p">}}</span>
+    <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+
+
+    <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">button</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;table-top-action&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Adicionar registo&quot;</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span> <span class="n">function</span><span class="o">=</span><span class="s2">&quot;addRecord&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">i</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;icon&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;fas fa-plus-circle fa-lg&quot;</span><span class="o">&gt;&lt;/</span><span class="n">i</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">button</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">button</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;table-bulk-action&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Eliminar Selecionados&quot;</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span> <span class="n">function</span><span class="o">=</span><span class="s2">&quot;confirmDeleteBulk&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">i</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;icon&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;fas fa-trash&quot;</span><span class="o">&gt;&lt;/</span><span class="n">i</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">button</span><span class="o">&gt;</span>
+
+
+
+    <span class="o">&lt;</span><span class="n">div</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;rows&quot;</span><span class="o">&gt;</span><span class="p">[{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;101&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sr.name&quot;</span><span class="p">:</span><span class="s2">&quot;TEST&quot;</span><span class="p">,</span> <span class="s2">&quot;sr.description&quot;</span><span class="p">:</span><span class="s2">&quot;Teste de funcionalidades&quot;</span><span class="p">,</span> <span class="s2">&quot;sr.active&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">},</span>
+                       <span class="s2">&quot;_data&quot;</span><span class="p">:{</span><span class="s2">&quot;last_update&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-01-01&quot;</span><span class="p">},</span>
+                       <span class="s2">&quot;_permissions&quot;</span><span class="p">:[</span><span class="s2">&quot;u&quot;</span><span class="p">,</span><span class="s2">&quot;d&quot;</span><span class="p">],</span>
+                       <span class="s2">&quot;_data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sr.code&quot;</span><span class="p">,</span><span class="s2">&quot;X2536&quot;</span><span class="p">},</span>
+                       <span class="s2">&quot;_actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&lt;fwk-button value=</span><span class="se">\&quot;</span><span class="s2">Editar</span><span class="se">\&quot;</span><span class="s2"> color=</span><span class="se">\&quot;</span><span class="s2">blue</span><span class="se">\&quot;</span><span class="s2"> function=&#39;{</span><span class="se">\&quot;</span><span class="s2">editRecord</span><span class="se">\&quot;</span><span class="s2">:[101]}&#39;&gt;&lt;\/fwk-button&gt;&quot;</span><span class="p">,</span>
+                                    <span class="s2">&quot;&lt;fwk-button value=</span><span class="se">\&quot;</span><span class="s2">Eliminar</span><span class="se">\&quot;</span><span class="s2"> color=</span><span class="se">\&quot;</span><span class="s2">blue</span><span class="se">\&quot;</span><span class="s2"> function=&#39;{</span><span class="se">\&quot;</span><span class="s2">confirmDeleteRecord</span><span class="se">\&quot;</span><span class="s2">:[101, </span><span class="se">\&quot;</span><span class="s2">TEST</span><span class="se">\&quot;</span><span class="s2">]}&#39;&gt;&lt;\/fwk-button&gt;&quot;</span><span class="p">]},</span>
+                      <span class="p">{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;3&quot;</span><span class="p">,</span><span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sr.name&quot;</span><span class="p">:</span><span class="s2">&quot;SUPPORT&quot;</span><span class="p">,</span> <span class="s2">&quot;sr.description&quot;</span><span class="p">:</span><span class="s2">&quot;Suporte à solução&quot;</span><span class="p">,</span> <span class="s2">&quot;sr.active&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">},</span>
+                       <span class="s2">&quot;_data&quot;</span><span class="p">:{</span><span class="s2">&quot;last_update&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-01-01&quot;</span><span class="p">},</span>
+                       <span class="s2">&quot;_data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sr.code&quot;</span><span class="p">,</span><span class="s2">&quot;X2537&quot;</span><span class="p">},</span>
+                       <span class="s2">&quot;_permissions&quot;</span><span class="p">:[</span><span class="s2">&quot;u&quot;</span><span class="p">],</span>
+                       <span class="s2">&quot;_actions&quot;</span><span class="p">:[</span><span class="s2">&quot;&lt;fwk-button value=</span><span class="se">\&quot;</span><span class="s2">Editar</span><span class="se">\&quot;</span><span class="s2"> color=</span><span class="se">\&quot;</span><span class="s2">blue</span><span class="se">\&quot;</span><span class="s2"> function=&#39;{</span><span class="se">\&quot;</span><span class="s2">editRecord</span><span class="se">\&quot;</span><span class="s2">:[3]}&#39;&gt;&lt;\/fwk-button&gt;&quot;</span><span class="p">,</span>
+                                   <span class="s2">&quot;&lt;fwk-button value=</span><span class="se">\&quot;</span><span class="s2">Eliminar</span><span class="se">\&quot;</span><span class="s2"> color=</span><span class="se">\&quot;</span><span class="s2">blue</span><span class="se">\&quot;</span><span class="s2"> disable=</span><span class="se">\&quot;</span><span class="s2">true</span><span class="se">\&quot;</span><span class="s2"> function=&#39;{</span><span class="se">\&quot;</span><span class="s2">confirmDeleteRecord</span><span class="se">\&quot;</span><span class="s2">:[3, </span><span class="se">\&quot;</span><span class="s2">SUPPORT</span><span class="se">\&quot;</span><span class="s2">]}&#39;&gt;&lt;\/fwk-button&gt;&quot;</span><span class="p">]}]</span>
+                        <span class="o">...</span>
+    <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+
+
+    <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;filter_save&quot;</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;filter-top-action&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Gravar&quot;</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span> <span class="n">function</span><span class="o">=</span><span class="s2">&quot;obj_filter_helper.confirmSave&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">i</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;icon&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;fas fa-save fa-lg&quot;</span><span class="o">&gt;&lt;/</span><span class="n">i</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">button</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">button</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;filter_delete&quot;</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;filter-top-action&quot;</span> <span class="n">visible</span><span class="o">=</span><span class="s2">&quot;false&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Eliminar&quot;</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span> <span class="n">function</span><span class="o">=</span><span class="s2">&quot;obj_filter_helper.confirmDelete&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">i</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;icon&quot;</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;fas fa-trash&quot;</span><span class="o">&gt;&lt;/</span><span class="n">i</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">button</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="n">div</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;filter-component&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">label</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Filtro:&quot;</span><span class="o">&gt;&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">label</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">select</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;filter_id&quot;</span> <span class="n">key</span><span class="o">-</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;id&quot;</span> <span class="n">key</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;name&quot;</span> <span class="n">placeholder</span><span class="o">=</span><span class="s2">&quot;Selecione&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;250&quot;</span> <span class="n">function</span><span class="o">=</span><span class="s2">&quot;obj_filter_helper.applySaved&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">div</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;options&quot;</span><span class="o">&gt;</span><span class="p">[{},{},</span><span class="o">...</span><span class="p">]</span><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">select</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="n">div</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;filter-component&quot;</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;padding-right: 10px;&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">label</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Pesquisa livre:&quot;</span><span class="o">&gt;&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">label</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="nb">input</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;filter_search&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="n">placeholder</span><span class="o">=</span><span class="s2">&quot;&gt; 2 carateres&#39;)&quot;</span> <span class="n">maxlength</span><span class="o">=</span><span class="s2">&quot;50&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;250&quot;</span> <span class="n">tooltip</span><span class="o">-</span><span class="n">position</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">span</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;information&quot;</span><span class="o">&gt;</span><span class="n">texto</span><span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="nb">input</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="n">div</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;filter-component&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">label</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Tipo:&quot;</span><span class="o">&gt;&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">label</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">select</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;role_system&quot;</span> <span class="n">key</span><span class="o">-</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;value&quot;</span> <span class="n">key</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;description&quot;</span> <span class="n">placeholder</span><span class="o">=</span><span class="s2">&quot;Todos&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;150&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">div</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;options&quot;</span><span class="o">&gt;</span><span class="p">[{},{}]</span><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">select</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="n">div</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;filter-component&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">label</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;Estado:&quot;</span><span class="o">&gt;&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">label</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">select</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;role_active&quot;</span> <span class="n">key</span><span class="o">-</span><span class="n">value</span><span class="o">=</span><span class="s2">&quot;value&quot;</span> <span class="n">key</span><span class="o">-</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;description&quot;</span> <span class="n">placeholder</span><span class="o">=</span><span class="s2">&quot;Todos&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;150&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">div</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;options&quot;</span><span class="o">&gt;</span><span class="p">[{},{}]</span><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">select</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+    <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">formbutton</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;filter-action&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;LIMPAR&#39;&quot;</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span> <span class="n">function</span><span class="o">=</span><span class="s2">&quot;resetFilterComponents&quot;</span><span class="o">&gt;&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">formbutton</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">fwk</span><span class="o">-</span><span class="n">formbutton</span> <span class="n">slot</span><span class="o">=</span><span class="s2">&quot;filter-action&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;FILTRAR&quot;</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span> <span class="n">function</span><span class="o">=</span><span class="s2">&quot;applyFilter&quot;</span><span class="o">&gt;&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">formbutton</span><span class="o">&gt;</span>
+
+<span class="o">&lt;/</span><span class="n">fwk</span><span class="o">-</span><span class="n">table</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<div class="last line-block">
+<div class="line">Se o conteúdo da slot <code class="docutils literal notranslate"><span class="pre">nodes</span></code> tiver origem num array deverá ser convertida para json utilizando as opções <code class="docutils literal notranslate"><span class="pre">JSON_HEX_QUOT</span> <span class="pre">|</span> <span class="pre">JSON_HEX_TAG</span></code>.</div>
+<div class="line">Exemplo: <code class="docutils literal notranslate"><span class="pre">&lt;?=</span> <span class="pre">json_encode($table_rows,</span> <span class="pre">JSON_HEX_QUOT</span> <span class="pre">|</span> <span class="pre">JSON_HEX_TAG)</span> <span class="pre">?&gt;</span></code>.</div>
+</div>
+</div>
+</div>
+<div class="section" id="carregamento-javascript">
+<h3>Carregamento Javascript<a class="headerlink" href="#carregamento-javascript" title="Permalink to this headline">¶</a></h3>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">obj_table</span> <span class="o">=</span> <span class="n">FormHelper</span><span class="o">.</span><span class="n">getComponent</span><span class="p">(</span><span class="s1">&#39;roles_list&#39;</span><span class="p">);</span>
+
+<span class="n">var</span> <span class="n">rows</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;101&quot;</span><span class="p">,</span> <span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sr.name&quot;</span><span class="p">:</span><span class="s2">&quot;TEST&quot;</span><span class="p">,</span> <span class="s2">&quot;sr.description&quot;</span><span class="p">:</span><span class="s2">&quot;Teste de funcionalidades&quot;</span><span class="p">,</span> <span class="s2">&quot;sr.active&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">},</span>
+             <span class="s2">&quot;_data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;last_update&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-01-01&quot;</span><span class="p">},</span>
+             <span class="s2">&quot;_permissions&quot;</span><span class="p">:[</span><span class="s2">&quot;u&quot;</span><span class="p">,</span><span class="s2">&quot;d&quot;</span><span class="p">],</span>
+             <span class="s2">&quot;_data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sr.code&quot;</span><span class="p">,</span><span class="s2">&quot;X2536&quot;</span><span class="p">},</span>
+             <span class="s2">&quot;_actions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&lt;fwk-button value=</span><span class="se">\&quot;</span><span class="s2">Editar</span><span class="se">\&quot;</span><span class="s2"> color=</span><span class="se">\&quot;</span><span class="s2">blue</span><span class="se">\&quot;</span><span class="s2"> function=&#39;{</span><span class="se">\&quot;</span><span class="s2">editRecord</span><span class="se">\&quot;</span><span class="s2">:[101]}&#39;&gt;&lt;\/fwk-button&gt;&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;&lt;fwk-button value=</span><span class="se">\&quot;</span><span class="s2">Eliminar</span><span class="se">\&quot;</span><span class="s2"> color=</span><span class="se">\&quot;</span><span class="s2">blue</span><span class="se">\&quot;</span><span class="s2"> disable=</span><span class="se">\&quot;</span><span class="s2">false</span><span class="se">\&quot;</span><span class="s2"> function=&#39;{</span><span class="se">\&quot;</span><span class="s2">confirmDeleteRecord</span><span class="se">\&quot;</span><span class="s2">:[101, </span><span class="se">\&quot;</span><span class="s2">TEST</span><span class="se">\&quot;</span><span class="s2">]}&#39;&gt;&lt;\/fwk-button&gt;&quot;</span><span class="p">]},</span>
+             <span class="p">{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span><span class="s2">&quot;3&quot;</span><span class="p">,</span><span class="s2">&quot;values&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sr.name&quot;</span><span class="p">:</span><span class="s2">&quot;SUPPORT&quot;</span><span class="p">,</span> <span class="s2">&quot;sr.description&quot;</span><span class="p">:</span><span class="s2">&quot;Suporte à solução&quot;</span><span class="p">,</span> <span class="s2">&quot;sr.active&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">},</span>
+             <span class="s2">&quot;_data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;last_update&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-01-01&quot;</span><span class="p">},</span>
+             <span class="s2">&quot;_permissions&quot;</span><span class="p">:[</span><span class="s2">&quot;u&quot;</span><span class="p">],</span>
+             <span class="s2">&quot;_data&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;sr.code&quot;</span><span class="p">,</span><span class="s2">&quot;X2537&quot;</span><span class="p">},</span>
+             <span class="s2">&quot;_actions&quot;</span><span class="p">:[</span><span class="s2">&quot;&lt;fwk-button value=</span><span class="se">\&quot;</span><span class="s2">Editar</span><span class="se">\&quot;</span><span class="s2"> color=</span><span class="se">\&quot;</span><span class="s2">blue</span><span class="se">\&quot;</span><span class="s2"> function=&#39;{</span><span class="se">\&quot;</span><span class="s2">editRecord</span><span class="se">\&quot;</span><span class="s2">:[3]}&#39;&gt;&lt;\/fwk-button&gt;&quot;</span><span class="p">,</span>
+                         <span class="s2">&quot;&lt;fwk-button value=</span><span class="se">\&quot;</span><span class="s2">Eliminar</span><span class="se">\&quot;</span><span class="s2"> color=</span><span class="se">\&quot;</span><span class="s2">blue</span><span class="se">\&quot;</span><span class="s2"> disable=</span><span class="se">\&quot;</span><span class="s2">true</span><span class="se">\&quot;</span><span class="s2"> function=&#39;{</span><span class="se">\&quot;</span><span class="s2">confirmDeleteRecord</span><span class="se">\&quot;</span><span class="s2">:[3, </span><span class="se">\&quot;</span><span class="s2">SUPPORT</span><span class="se">\&quot;</span><span class="s2">]}&#39;&gt;&lt;\/fwk-button&gt;&quot;</span><span class="p">]}];</span>
+
+<span class="n">obj_table</span><span class="o">.</span><span class="n">fill</span><span class="p">({</span><span class="n">records</span><span class="p">:</span> <span class="n">rows</span><span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="carregamento-ajax">
+<h3>Carregamento Ajax<a class="headerlink" href="#carregamento-ajax" title="Permalink to this headline">¶</a></h3>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">obj_ajax_helper</span> <span class="o">=</span> <span class="n">new</span> <span class="n">AjaxHelper</span><span class="p">();</span>
+<span class="n">var</span> <span class="n">obj_reader_helper</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ReaderHelper</span><span class="p">();</span>
+<span class="n">var</span> <span class="n">obj_table</span> <span class="o">=</span> <span class="n">FormHelper</span><span class="o">.</span><span class="n">getComponent</span><span class="p">(</span><span class="s1">&#39;roles_list&#39;</span><span class="p">);</span>
+
+<span class="n">var</span> <span class="n">reader</span> <span class="o">=</span> <span class="p">{</span><span class="n">ajax</span><span class="p">:</span> <span class="n">obj_ajax_helper</span><span class="p">,</span> <span class="nb">filter</span><span class="p">:</span> <span class="n">obj_reader_helper</span><span class="p">,</span> <span class="n">fully_qualified_class_name</span><span class="p">:</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">???</span><span class="se">\\</span><span class="s1">???</span><span class="se">\\</span><span class="s1">...</span><span class="se">\\</span><span class="s1">???&#39;</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="s1">&#39;???&#39;</span><span class="p">};</span>
+<span class="n">obj_table</span><span class="o">.</span><span class="n">fill</span><span class="p">({</span>
+    <span class="n">reader</span><span class="p">:</span> <span class="n">reader</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="funcionalidades">
+<h2>Funcionalidades<a class="headerlink" href="#funcionalidades" title="Permalink to this headline">¶</a></h2>
+<p>Assumindo que exite um objecto instanciado com o componente:</p>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">obj_table</span> <span class="o">=</span> <span class="n">FormHelper</span><span class="o">.</span><span class="n">getComponent</span><span class="p">(</span><span class="s1">&#39;fwk_table&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="section" id="seleccionar-nao-seleccionados">
+<h3>Seleccionar não seleccionados<a class="headerlink" href="#seleccionar-nao-seleccionados" title="Permalink to this headline">¶</a></h3>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj_table</span><span class="o">.</span><span class="n">select</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="desseleccionar-seleccionados">
+<h3>Desseleccionar seleccionados<a class="headerlink" href="#desseleccionar-seleccionados" title="Permalink to this headline">¶</a></h3>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj_table</span><span class="o">.</span><span class="n">unselect</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ler-identificadores-de-linhas-seleccionadas">
+<h3>Ler identificadores de linhas seleccionadas<a class="headerlink" href="#ler-identificadores-de-linhas-seleccionadas" title="Permalink to this headline">¶</a></h3>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">ids</span> <span class="o">=</span> <span class="n">obj_table</span><span class="o">.</span><span class="n">getSelectedKeys</span><span class="p">();</span> <span class="p">(</span><span class="n">array</span><span class="p">)</span>
+<span class="n">let</span> <span class="n">ids</span> <span class="o">=</span> <span class="n">obj_table</span><span class="o">.</span><span class="n">getSelectedKeys</span><span class="p">(</span><span class="s1">&#39;permission&#39;</span><span class="p">);</span> <span class="p">(</span><span class="n">array</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Pode ou não ser validada uma permissão de linha para filtrar o resultado.</p>
+</div>
+</div>
+<div class="section" id="ler-atributos-extra-de-linha">
+<h3>Ler atributos extra de linha<a class="headerlink" href="#ler-atributos-extra-de-linha" title="Permalink to this headline">¶</a></h3>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">data</span> <span class="o">=</span> <span class="n">obj_table</span><span class="o">.</span><span class="n">data</span><span class="p">;</span> <span class="p">(</span><span class="nb">object</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mostrar-esconder">
+<h3>Mostrar / esconder<a class="headerlink" href="#mostrar-esconder" title="Permalink to this headline">¶</a></h3>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj_table</span><span class="o">.</span><span class="n">hide</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+<span class="n">obj_table</span><span class="o">.</span><span class="n">hide</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="habilitar-inibir">
+<h3>Habilitar / inibir<a class="headerlink" href="#habilitar-inibir" title="Permalink to this headline">¶</a></h3>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">obj_table</span><span class="o">.</span><span class="n">disable</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+<span class="n">obj_table</span><span class="o">.</span><span class="n">disable</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ler-estados">
+<h3>Ler estados<a class="headerlink" href="#ler-estados" title="Permalink to this headline">¶</a></h3>
+<div class="code Javascript highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">let</span> <span class="n">is_hide</span> <span class="o">=</span> <span class="n">obj_table</span><span class="o">.</span><span class="n">hide</span><span class="p">;</span>
+<span class="n">let</span> <span class="n">is_disable</span> <span class="o">=</span> <span class="n">obj_table</span><span class="o">.</span><span class="n">disable</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><a class="reference internal" href="../../helpers/js/formhelper.html#jsformhelper"><span class="std std-ref">JS Form Helper</span></a> é uma classe de auxílio às operações sobre formulários.</div>
+<div class="line"><a class="reference internal" href="../../helpers/js/ajaxhelper.html#jsajaxhelper"><span class="std std-ref">JS Ajax helper</span></a> é uma classe de auxílio aos pediddos Ajax.</div>
+<div class="line"><a class="reference internal" href="../../helpers/js/readerhelper.html#jsreaderhelper"><span class="std std-ref">JS Reader helper</span></a> é uma classe de auxílio às operações de leitura dos pedidos Ajax.</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="text.html" class="btn btn-neutral float-right" title="Text" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="shield.html" class="btn btn-neutral float-left" title="Shield" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Pedro Monteiro.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
