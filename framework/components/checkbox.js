@@ -361,8 +361,6 @@
                  */    
                 elements.addEventListener('click', evt => {
 
-                    evt.stopPropagation();
-                    
                     // Se o componente não está disable   
                     if (component.function_active) {
 
