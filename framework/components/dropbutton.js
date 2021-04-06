@@ -135,7 +135,7 @@
             border: 1px solid var(--hover-color);
             box-shadow: 3px 3px 10px 0px rgba(0,0,0,0.35);
             margin: 2px 0px 10px;
-            padding: 10px 10px;
+            padding: 5px 10px;
             overflow-y: auto;
         }
         .container.right .body {
