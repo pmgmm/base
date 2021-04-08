@@ -688,7 +688,8 @@
                     fully_qualified_class_name: component.reader.fully_qualified_class_name,
                     action:  component.reader.action, 
                     action_data: {
-                       
+                        value: data.value,
+                        filter: component.reader.filter
                     },
                     success: function(content) {
                         data['options'] = content['options'];
