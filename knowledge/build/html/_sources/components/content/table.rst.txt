@@ -228,10 +228,10 @@ Slot filter-component
 
 .. _filter_action_slot:
 
-Slot slot filter-action
------------------------
+Slot filter-action
+------------------
 
-| A slot ``filter-top-action`` é um componente, habitualmente um :ref:`formbutton`.
+| A slot ``filter-action`` é um componente, habitualmente um :ref:`formbutton`.
 | Existirá uma slot deste tipo para cada componente que se pretenda adicionar à área de acções do filtro.
 
 .. code:: html
