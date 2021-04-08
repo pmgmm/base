@@ -97,6 +97,12 @@ class Base implements \FWK\interfaces\AjaxAnswerInterface {
             // Carrega registos na entidade
             $obj_user->loadList(null, $db_search, $db_filter, $db_order, $db_limit, $db_offset);
 
+            // Botões para lista
+            $view_button_value = TH::translate('Ver');
+            $update_button_value = TH::translate('Editar');
+            $delete_button_value = TH::translate('Eliminar');
+            $notify_button_value = TH::translate('Notificar');
+
             // Itera registos e carrega array de resposta
             $arr_records = array();
             while ($obj_user->loadNextRecord()) {
@@ -131,15 +137,16 @@ class Base implements \FWK\interfaces\AjaxAnswerInterface {
                 // Acções
                 $arr_record['_actions'] = array();
                 if ($row_update) {
-                    $arr_record['_actions'][] = '<fwk-button value="' . TH::translate('Editar') . '" color="blue" function=\'{"editRecord":[' . $id . ']}\'></fwk-button>';
+                    $show_button_value = $update_button_value;
                 } else {
-                    $arr_record['_actions'][] = '<fwk-button value="' . TH::translate('Ver') . '" color="blue" function=\'{"viewRecord":[' . $id . ']}\'></fwk-button>';
+                    $show_button_value = $view_button_value;
                 }
+                $arr_record['_actions'][] = '<fwk-button value="'.$show_button_value.'" color="blue" function=\'{"showRecord":[' . $id . ']}\'></fwk-button>';
                 if ($row_delete) {
-                    $arr_record['_actions'][] = '<fwk-button value="' . TH::translate('Eliminar') . '" color="blue" function=\'{"confirmDeleteRecord":[' . $id . ', "' . $arr_record['values']['du.name'] . '"]}\'></fwk-button>';
+                    $arr_record['_actions'][] = '<fwk-button value="'.$delete_button_value.'" color="blue" function=\'{"confirmDeleteRecord":[' . $id . ', "' . $arr_record['values']['du.name'] . '"]}\'></fwk-button>';
                 }
                 if ($permission_notification && $obj_user->getProperty('notification_endpoint')) {
-                    $arr_record['_actions'][] = '<fwk-button value="' . TH::translate('Notificar') . '" color="blue" function=\'{"notify":[' . $id . ']}\'></fwk-button>';
+                    $arr_record['_actions'][] = '<fwk-button value="'.$notify_button_value.'" color="blue" function=\'{"notify":[' . $id . ']}\'></fwk-button>';
                 }
 
                  $arr_records[] = $arr_record;

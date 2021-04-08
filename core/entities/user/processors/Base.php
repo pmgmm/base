@@ -89,6 +89,11 @@ class Base implements \FWK\interfaces\AjaxAnswerInterface {
             // Carrega registos na entidade
             $obj_user->loadList(null, $db_search, $db_filter, $db_order, $db_limit, $db_offset);
 
+            // Botões para lista
+            $view_button_value = TH::translate('Ver');
+            $update_button_value = TH::translate('Editar');
+            $delete_button_value = TH::translate('Eliminar');
+
             // Itera registos e carrega array de resposta
             $arr_records = array();
             while ($obj_user->loadNextRecord()) {
@@ -121,14 +126,15 @@ class Base implements \FWK\interfaces\AjaxAnswerInterface {
                 if ($row_update) {$arr_record['_permissions'][] = 'u';}
                 if ($row_delete) {$arr_record['_permissions'][] = 'd';}
 
-                 // Acções
-                 $arr_record['_actions'] = array();
-                 if ($row_update) {
-                     $arr_record['_actions'][] = '<fwk-button value="'.TH::translate('Editar').'" color="blue" function=\'{"editRecord":['.$id.']}\'></fwk-button>';
-                 } else {
-                     $arr_record['_actions'][] = '<fwk-button value="'.TH::translate('Ver').'" color="blue" function=\'{"viewRecord":['.$id.']}\'></fwk-button>';
-                 }
-                 $arr_record['_actions'][] = '<fwk-button value="'.TH::translate('Eliminar').'" color="blue" disable="'.($row_delete?'false':'true').'" function=\'{"confirmDeleteRecord":['.$id.', "'.$name.'"]}\'></fwk-button>';
+                // Acções
+                $arr_record['_actions'] = array();
+                if ($row_update) {
+                    $show_button_value = $update_button_value;
+                } else {
+                    $show_button_value = $view_button_value;
+                }
+                $arr_record['_actions'][] = '<fwk-button value="'.$show_button_value.'" color="blue" function=\'{"showRecord":['.$id.']}\'></fwk-button>';
+                $arr_record['_actions'][] = '<fwk-button value="'.$delete_button_value.'" color="blue" disable="'.($row_delete?'false':'true').'" function=\'{"confirmDeleteRecord":['.$id.', "'.$name.'"]}\'></fwk-button>';
  
                  $arr_records[] = $arr_record;
 

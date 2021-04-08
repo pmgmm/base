@@ -54,7 +54,7 @@ function addRecord() {
 
 
 /**
- * Carrega página de registo em modo de update
+ * Carrega página de registo (se view ou update, é validado no record)
  * 
  * @param int id = Id do registo
  * 
@@ -62,22 +62,8 @@ function addRecord() {
  * 
  * @pmonteiro (yyyy-mm-dd)
  */
-function editRecord(id) {
-    window.location.href = 'record.php?id='+btoa(id);
-}
-
-
-/**
- * Carrega página de registo em modo view
- * 
- * @param int id = Id do registo
- * 
- * @return void
- * 
- * @pmonteiro (yyyy-mm-dd)
- */
-function viewRecord(id) {
-    window.location.href = 'record.php?id='+btoa(id);
+ function showRecord(id) {
+    window.location.href = 'record.php?id='+id;
 }
 
 
