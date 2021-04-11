@@ -21,7 +21,7 @@ CREATE TABLE `customers` (
   UNIQUE KEY `customers_name_UN` (`name`),
   UNIQUE KEY `customers_user_UN` (`user`),
   UNIQUE KEY `customers_email_UN` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Clientes';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='Clientes';
 
 
 -- base.delivery_users definition
@@ -47,7 +47,7 @@ CREATE TABLE `delivery_users` (
   UNIQUE KEY `delivery_users_name_UN` (`name`),
   UNIQUE KEY `delivery_users_user_UN` (`user`),
   UNIQUE KEY `delivery_users_authorization_UN` (`authorization`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Utilizadores Delivery';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='Utilizadores Delivery';
 
 
 -- base.log_debug definition
@@ -126,7 +126,7 @@ CREATE TABLE `sys_apps` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `sys_apps_key_UN` (`_key`),
   UNIQUE KEY `sys_apps_name_UN` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 
 -- base.sys_filters definition
@@ -144,7 +144,7 @@ CREATE TABLE `sys_filters` (
   `_on` datetime NOT NULL COMMENT 'UTC Data/Hora de inserção/alteração do registo',
   PRIMARY KEY (`id`),
   UNIQUE KEY `sys_filters_object_id_user_id_name_UN` (`user_id`,`list`,`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Permissões por função';
+) ENGINE=InnoDB AUTO_INCREMENT=104 DEFAULT CHARSET=utf8 COMMENT='Permissões por função';
 
 
 -- base.sys_groups definition
@@ -158,7 +158,7 @@ CREATE TABLE `sys_groups` (
   `_on` datetime NOT NULL COMMENT 'UTC Data/Hora de inserção/alteração do registo',
   PRIMARY KEY (`id`),
   UNIQUE KEY `sys_groups_name_UN` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Grupos de utilizador';
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COMMENT='Grupos de utilizador';
 
 
 -- base.sys_permissions definition
@@ -173,7 +173,7 @@ CREATE TABLE `sys_permissions` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `sys_permissions_code_UN` (`code`),
   KEY `sys_permissions_type_IDX` (`type`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Permissões para funções de utilizador';
+) ENGINE=InnoDB AUTO_INCREMENT=217 DEFAULT CHARSET=utf8 COMMENT='Permissões para funções de utilizador';
 
 
 -- base.sys_roles definition
@@ -188,7 +188,7 @@ CREATE TABLE `sys_roles` (
   `_on` datetime NOT NULL COMMENT 'UTC Data/Hora de inserção/alteração do registo',
   PRIMARY KEY (`id`),
   UNIQUE KEY `sys_roles_name_UN` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Funções de utilizador';
+) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8 COMMENT='Funções de utilizador';
 
 
 -- base.sys_translations definition
@@ -204,7 +204,7 @@ CREATE TABLE `sys_translations` (
   `_on` datetime NOT NULL COMMENT 'UTC Data/Hora de inserção/alteração do registo',
   PRIMARY KEY (`id`),
   UNIQUE KEY `sys_translations_layer_source_UN` (`layer`,`source`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=357 DEFAULT CHARSET=utf8;
 
 
 -- base.sys_users definition
@@ -229,7 +229,7 @@ CREATE TABLE `sys_users` (
   UNIQUE KEY `sys_users_email_UN` (`email`),
   UNIQUE KEY `sys_users_name_UN` (`name`),
   UNIQUE KEY `sys_users_user_UN` (`user`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Utilizadores';
+) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8 COMMENT='Utilizadores';
 
 
 -- base.delivery_packs definition
@@ -244,7 +244,7 @@ CREATE TABLE `delivery_packs` (
   PRIMARY KEY (`id`),
   KEY `delivery_packs_user_id_IDX` (`user_id`) USING BTREE,
   CONSTRAINT `delivery_task_delivery_user_FK` FOREIGN KEY (`user_id`) REFERENCES `delivery_users` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Packs de tarefas';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Packs de tarefas';
 
 
 -- base.delivery_tasks definition
@@ -264,7 +264,26 @@ CREATE TABLE `delivery_tasks` (
   KEY `delivery_task_customer_FK` (`customer_id`),
   CONSTRAINT `delivery_task_customer_FK` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`),
   CONSTRAINT `delivery_task_delivery_pack_FK` FOREIGN KEY (`pack_id`) REFERENCES `delivery_packs` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Tabela de tarefas';
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COMMENT='Tabela de tarefas';
+
+
+-- base.infrastructures definition
+
+CREATE TABLE `infrastructures` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `parent_id` int(11) DEFAULT NULL COMMENT 'Infraestrutura pai',
+  `name` varchar(100) NOT NULL COMMENT 'Nome da infraestrutura',
+  `description` varchar(255) DEFAULT NULL COMMENT 'Descrição da infraestrutura',
+  `icon` varchar(25) DEFAULT NULL COMMENT 'Icone da infraestrutura',
+  `aggregator` tinyint(1) NOT NULL COMMENT '? É agregadora',
+  `freeze` tinyint(1) NOT NULL COMMENT '? Nó "congelado"',
+  `active` tinyint(1) NOT NULL COMMENT '? Está activa',
+  `_by` varchar(100) NOT NULL COMMENT 'Utilizador responsável pela inserção/alteração do registo',
+  `_on` datetime NOT NULL COMMENT 'UTC Data/Hora de inserção/alteração do registo',
+  PRIMARY KEY (`id`),
+  KEY `infrastructures_FK` (`parent_id`),
+  CONSTRAINT `infrastructures_FK` FOREIGN KEY (`parent_id`) REFERENCES `infrastructures` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='Infraestruturas';
 
 
 -- base.sys_role_permissions definition
