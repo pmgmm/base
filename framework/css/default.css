@@ -58,6 +58,7 @@ body {
     display: none;
     position: relative; 
     background-color: var(--page-background-color);
+    overflow: hidden;
 }
 table {
     border-collapse: collapse;

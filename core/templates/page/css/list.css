@@ -46,7 +46,7 @@
 .template-list-container .body {
     padding-top: 20px;
     grid-area: body;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 /* --- END */
 /* Altura ocupada por template (template_height): 5 + 5 + 145 + 20 = 175 */

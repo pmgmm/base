@@ -14,8 +14,8 @@ require_once 'modules.php';
 define ('CORE', array('name' => 'BASE', 'version' => '0.0.0.1', 'copyright' => '2020 pmgmm@hotmail.com'));
 
 // Repositórios
-define ('REPOSITORY_MAIN', array('host' => 'development', 'port' => 3306, 'name' => 'base', 'user' => 'serviceuser', 'password' => 'su1234'));
-define ('REPOSITORY_LOG', array('host' => 'development', 'port' => 3306, 'name' => 'base', 'user' => 'serviceuser', 'password' => 'su1234'));
+define ('REPOSITORY_MAIN', array('host' => 'devpedromonteiro', 'port' => 3306, 'name' => 'base', 'user' => 'serviceuser', 'password' => 'su1234'));
+define ('REPOSITORY_LOG', array('host' => 'devpedromonteiro', 'port' => 3306, 'name' => 'base', 'user' => 'serviceuser', 'password' => 'su1234'));
 
 // Segurança
 session_start(array('name' => md5('SESSION'.$_SERVER['REMOTE_ADDR'].$_SERVER['HTTP_USER_AGENT'])));

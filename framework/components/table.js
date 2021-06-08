@@ -921,7 +921,7 @@
                     config.template_height = content.template_height ?? component.template_height;
                     if (config.height && !isNaN(config.height)) {
                         // Número de linhas a mostrar
-                        filter_body.style.height = (config.height-36) + 'px'; // footer
+                        filter_body.style.height = (config.height-52) + 'px'; // scroll + footer
                         body.style.height = config.height + 1 + 'px';   
                         // Página
                         // O número de linhas do pedido é = content.rows + 10;
@@ -929,12 +929,12 @@
                     } else if(config.template_height && !isNaN(config.template_height)) { 
                         // O footer da tabela acompanha o footer da página
                         // config.template_height é o ajuste de topo do template até à tabela
-                        var no_table_height = config.template_height + 34; // header
+                        var no_table_height = config.template_height + 50; // header
                         if (config.filter || config.bulk || config.actions) {
                             no_table_height += 30; // linha de acções
                         }              
                         no_table_height += 5; // Margem inferior
-                        filter_body.style.height = 'calc(100vh - ' + (no_table_height + 36) + 'px)'; // footer
+                        filter_body.style.height = 'calc(100vh - ' + (no_table_height + 36) + 'px)'; // scroll + footer
                         body.style.height = 'calc(100vh - ' + (no_table_height) + 'px)';
                         // Página
                         // Calcula o número de linhas que cabem na altura máxima disponível (tendo em conta o ecran)

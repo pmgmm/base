@@ -45,7 +45,7 @@
 
 .template-page-container .body {
     grid-area: body;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 /* Altura ocupada por template(template_height): 5 + 5 + 165 + 10 = 185 */
